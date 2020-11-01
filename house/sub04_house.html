@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>          
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main_house</title>
+
+      <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="dist/css/swiper.min.css"> 
+    <link rel="stylesheet" href="css/house_style.css"><!--해더푸터-->
+    <link rel="stylesheet" href="css/sub04_house.css"><!--컨텐츠-->
+    
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/navi.js"></script>
+    <!--favicon 넣기-->
+    <!--아이폰 홈화면 아이콘-->
+    <link rel="apple-touch-icon-precomposed" href="img/Etude.png">
+    <!--pc 아이콘-->
+    <link rel="shortcut icon" href="img/Etude.png">
+   
+   <script>
+    $(function(){
+       
+        
+        $('a.heart').click(function(){
+            $(this).toggleClass('on');
+            
+            return false; /*a테그로 되어있어서 누르면 위로올라가기때문에 이걸적어야 뒤로 안올라감 하트모양!!*/
+        });
+        
+   
+         
+        $('.go_top').click(function(){
+            $('html, body').animate({
+                scrollTop : 0
+            },500);
+            return false;
+        });
+        
+        var offset = 200;
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            
+            if(st > offset  && $(this).width()>768){
+                $('.go_top').fadeIn(500);
+            }else{
+                $('.go_top').fadeOut(500);
+            }
+        });
+        $(window).resize(function(){
+             if($(this).width()<=768){
+                 $('.go_top').hide();
+             }
+         })
+        
+        
+        
+        $('#pro #pro_wrap').click(function(){
+            $(this).toggleClass('open');
+            if($(this).hasClass('open')){
+                $(this).find('+ul').show();
+            }else{
+                $(this).find('+ul').hide();
+            }
+        });/*판매순 인기순*/
+        
+        $('#pro ul li').click(function(){
+            $('#pro ul').hide();
+            $('#pro_wrap').text($(this).text());  
+            $('#pro #pro_wrap').removeClass('open');
+        });
+        
+      
+        $('.clearfix2 li').eq(4).addClass('on');/*헤더 활성화 시키는거 홈,신상품,베스트그부분!*/
+        $('#menu li').eq(1).addClass('on');//*서브안에 메뉴 활성화시킨거
+   
+    });/*제이쿼리끝*/
+    
+    
+    </script>
+   
+</head>
+<body>    
+    <? include "header.html" ?>
+   <div id="all">
+    <div id="menu">
+       <ul class="center">
+           <li>
+              <a href="#">스킨</a> 
+           </li>
+           <li>
+              <a href="#">로션</a> 
+           </li>
+           <li>
+             <a href="#">에센스</a>
+           </li>
+           <li>
+              <a href="#">선케어</a>  
+           </li>
+       </ul>
+   </div>
+   
+   <div id="pro" class="center clearfix">
+      <div id="pro_list">
+          <div id="pro_wrap">
+           판매순
+           </div>
+        <ul>
+           <li>인기순</li>
+           <li>추천순</li>
+       </ul>
+      </div>
+       
+   </div>
+   
+   
+   </div>
+   
+<div id="new">
+
+   <!--///두번째 박스////-->
+    <div id="new_box2" class="photo center"> 
+        <ul>
+            <li class="center">
+               <a href="sub04-01_house.html">
+                
+                <h3>리얼 프로폴리스 에멀전 150ml </h3>
+                <div class="pho">
+                <img src="img/sub3,4/r1.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>9,600원</span>
+                   <p>12,000원</p>
+                </section>
+                </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub04-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+                
+            </li>
+            <li class="center">
+               <a href="sub04-01_house.html">
+                <h3>수분가득 콜라겐 에멀전 180m</h3>
+                <div class="pho">
+                <img src="img/sub3,4/r2.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>9,600원</span>
+                   <p>12,000원</p>
+                </section>
+                 </a>
+                 <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub04-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+               
+            </li>
+            <li class="center">
+               <a href="sub04-01_house.html">
+                <h3>순정 10무 수분 에멀전</h3>
+                <div class="pho">
+                <img src="img/sub3,4/r3.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>9,600원</span>
+                   <p>12,000원</p>
+                </section>
+                 </a>
+                 <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub04-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+               
+            </li>
+        
+        </ul>
+        
+        
+        
+        
+        
+        <ul>
+            <li class="center">
+               <a href="sub04-01_house.html">
+                <h3> AC 클린업 젤로션</h3>
+                <div class="pho">
+                <img src="img/sub3,4/r4.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>9,600원</span>
+                   <p>12,000원</p>
+                </section>
+                </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub04-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+                
+            </li>
+            <li class="center">
+               <a href="sub04-01_house.html">
+                <h3>골드 달링 플러스 리페어링 에멀젼 120ml</h3>
+                <div class="pho">
+                <img src="img/sub3,4/r5.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>8,800원</span>
+                   <p>11,000원</p>
+                </section>
+                </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub04-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+                
+            </li>
+            <li class="center">
+               <a href="sub04-01_house.html">
+               
+                <h3><strong>[일시품절]</strong>트루 릴리프 보습 에멀전</h3>
+                <div class="pho">
+                <img src="img/sub3,4/r6.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>14,400원</span>
+                   <p>18,000원</p>
+                </section>
+                </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub04-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+                
+            </li>
+        
+        
+        
+        </ul>
+    
+        
+        
+        
+    </div><!--new_box2-->
+    
+    
+</div>
+      
+        <div class="go_top"><a href="#">Go Top</a></div>
+            
+   
+    <? include "footer.html" ?>
+    
+     
+  
+   
+   <!-- Swiper JS -->
+  <script src="dist/js/swiper.min.js"></script>
+     <script>
+    var swiper1 = new Swiper('.swiper-container', {
+      slidesPerView: 3, //보여지는 슬라이드 개수
+      spaceBetween: 60, //슬라이드 사이 공간 /*0으로하면 여백없음*/
+      loop: true,  // 반복 슬라이드
+     
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true, //블릿버튼 제어
+      },
+        navigation: {
+        nextEl: '.swiper-button-next_new',
+        prevEl: '.swiper-button-prev_new',
+      },
+         breakpoints:{
+           
+            768:{
+                slidesPerView: 2,
+                spaceBetween:20
+            }
+        }
+    });
+         
+         
+         
+    </script>
+    
+</body>
+</html>

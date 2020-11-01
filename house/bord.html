@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>          
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main_house</title>
+     <!-- Link Swiper's CSS --> <!--스와이퍼-->
+    <link rel="stylesheet" href="dist/css/swiper.min.css"> 
+    
+    <link rel="stylesheet" href="http://sjsweb.dothome.co.kr/house/css/house_style.css"><!--해더푸터-->
+    <link rel="stylesheet" href="http://sjsweb.dothome.co.kr/house/css/bord.css"><!--컨텐츠-->
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="http://sjsweb.dothome.co.kr/house/js/jquery-3.4.1.min.js"></script>
+    <script src="http://sjsweb.dothome.co.kr/house/js/navi.js"></script>
+    <!--favicon 넣기-->
+    <!--아이폰 홈화면 아이콘-->
+    <link rel="apple-touch-icon-precomposed" href="img/Etude.png">
+    <!--pc 아이콘-->
+    <link rel="shortcut icon" href="img/Etude.png">
+    
+  <script>
+     $(function(){ //JQuery 준비
+        
+        
+        $('#new_best_list > div').hide();
+        $('#new_best_list > div').eq(0).css('display','flex'); /*원래는 .show(); 인데 나는 이렇게 바꿈.css('display','flex')를 한이유는 .show();는 블록요소라 아래로떨어짐! 나는 옆으로 가야되서 flex로 옆으로줌  */
+        
+        $('#new_best_top ul li').eq(0).addClass('on');
+        
+        $('#new_best_top ul li').click(function(){
+           $('#new_best_top ul li').removeClass('on'); 
+            $(this).addClass('on');
+            console.log($(this).index());
+            $('#new_best_list > div').hide();
+           $('#new_best_list > div').eq($(this).index()).css('display','flex');
+        });
+         
+       /* $('.clearfix2 li').eq(0).addClass('on');*/ 
+    
+         
+          $('.go_top').click(function(){
+            $('html, body').animate({
+                scrollTop : 0
+            },500);
+            return false;
+        });
+        
+        var offset = 200;
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            
+            if(st > offset && $(this).width()>768){
+                $('.go_top').fadeIn(500);
+            }else{
+                $('.go_top').fadeOut(500);
+            }
+        });
+         $(window).resize(function(){
+             if($(this).width()<=768){
+                 $('.go_top').hide();
+             }
+         })
+         
+     });
+    </script>
+  
+    
+   
+</head>
+<body>
+       
+    <header>
+        <div id="header_wrap" class="center clearfix">   
+            <div id="header_left">
+                <ul>
+                    <li><a href="#"><span><img src="http://sjsweb.dothome.co.kr/house/img/main_img/main_11.png" alt="찾기" class="ko"></span></a></li>
+                
+                    <li><a href="#"><img src="http://sjsweb.dothome.co.kr/house/img/main_img/main_13.png" alt="찾기"></a><span>매장찾기</span></li>
+                </ul>
+            </div>  
+            <h1>
+                <a href="http://sjsweb.dothome.co.kr/house/main_house.html"><img src="http://sjsweb.dothome.co.kr/house/img/main_img/main_03.png" alt="로고"></a>
+            </h1>
+            <div id="header_right">
+                <ul>
+                    <li><a href="#"><img src="http://sjsweb.dothome.co.kr/house/img/main_img/main_06.png" alt="돋보기"></a></li>
+            
+                    <li><a href="#"><img src="http://sjsweb.dothome.co.kr/house/img/main_img/main_07.png" alt="로그인" class="log"></a></li>
+            
+                    <li><a href="#"><img src="http://sjsweb.dothome.co.kr/house/img/main_img/main_08.png" alt="장바구니" class="log"></a></li>
+                </ul>
+                <div id="more">
+                    <img src="http://sjsweb.dothome.co.kr/house/img/main_img/more.png" alt="더보기" class="log">
+                </div>
+            </div>
+        </div>
+        
+       
+           
+           
+           
+    <nav id="gnb">
+            <ul class="center clearfix clearfix2">
+                <li><a href="http://sjsweb.dothome.co.kr/house/main_house.html">홈</a></li>
+                <li><a href="http://sjsweb.dothome.co.kr/house/sub01_house.html">신상품</a></li>
+                <li><a href="http://sjsweb.dothome.co.kr/house/sub02_house.html">베스트</a></li>
+                <li><a href="http://sjsweb.dothome.co.kr/house/sub03_house.html">메이크업</a></li>
+                <li><a href="http://sjsweb.dothome.co.kr/house/">스킨케어</a></li>
+                <li><a href="http://sjsweb.dothome.co.kr/xe/products_review">브랜드</a></li>
+            </ul>
+        </nav>
+
+        
+        <!--모바일 메뉴!-->
+        <div id="mb_navi">
+         <span class="close">
+           <i class="material-icons"> <!--아이콘임-->
+            clear
+            </i> 
+        </span>
+        <div id="sm_menu">
+           <div id="login">
+               <ul>
+                   <li>
+                       <a href="#">
+                         로그인  
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                         회원가입  
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                         장바구니  
+                       </a>
+                   </li>
+               </ul>
+               
+           </div>
+            <ul>
+                <li>
+                    <span><a href="#">신상품</a></span>
+                    <div class="menu_sec">
+                        <ul>
+
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <span><a href="#">베스트</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">전체</a></li>
+                            <li><a href="#">아이</a></li>
+                            <li><a href="#">립</a></li>
+                            <li><a href="#">페이스</a></li>
+                            <li><a href="#">네일</a></li>
+                            <li><a href="#">스킨</a></li>
+                            <li><a href="#">클렌징</a></li>
+                            <li><a href="#">바디</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <span><a href="#">메이크업</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">전체</a></li>
+                            <li><a href="#">아이</a></li>
+                            <li><a href="#">립</a></li>
+                            <li><a href="#">페이스</a></li>
+                            <li><a href="#">네일</a></li>
+                            <li><a href="#">스킨</a></li>
+                            <li><a href="#">클렌징</a></li>
+                            <li><a href="#">바디</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <span><a href="#">스킨케어</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">스킨</a></li>
+                            <li><a href="#">로션</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <span><a href="#">브랜드</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">브랜드소개</a></li>
+                            <li><a href="#">매장안내</a></li>
+                            <li><a href="http://sjsweb.dothome.co.kr/xe/products_review">이용후기</a></li>
+                        </ul>
+                    </div>
+                </li>
+                
+            </ul>
+
+            </div>
+        </div>
+    </header>
+    
+    
+  <div id="bord" class="center">
+      <h2>리뷰후기 (게시판)</h2>
+      <div id="bord_box">
+       {$content}
+          
+      </div>
+      
+  </div>
+
+    
+    <!--footer-->
+    <div id="footer" class="clearfix">
+        <div id="footer_top">
+           <ul class="center">
+            <li>
+                <a href="#">이용약관</a>
+            </li>
+            <li>
+                <a href="#"><strong>개인정보 처리방침</strong></a>
+            </li>
+            <li>
+               <a href="#">영상정보처리기기 운영·관리 방침</a>
+            </li>
+            <li>
+                <a href="#">이메일 무단수집 거부</a>
+            </li>
+            <li>
+                <a href="#">전자공고</a>
+            </li>
+            <li>
+                <a href="#">매장개설문의</a>
+            </li>
+            <li>
+                <a href="#">고객센터</a>
+            </li>
+        </ul>
+        </div>
+        
+        <div id="footer_bot">
+           <div id="bot_wrap" class="center">
+                 <p>주)에뛰드 │ 대표이사: 심재완, 서울특별시 용산구 한강대로 100(한강로2가)
+                사업자등록번호: 135-81-05033 │ 통신판매업신고번호: 제2017-서울용산-1292
+                개인정보보호책임자: 임재석 │ 호스팅제공자: (주)에뛰드 │ etudemall@etude.co.kr
+                고객상담: 1544-5418(쇼핑몰) │ 080-022-2285(제품 및 매장 외)
+                상담시간: 평일9시~18시(토/일/공휴일 휴무)
+                </p>
+                
+                <div class="icon">
+                <span>Copyright©2018 ETUDE HOUSE. All Rights Reserved.</span>
+              <ul>
+               <li>
+                   <a href="#"><img src="http://sjsweb.dothome.co.kr/house/img/main_img/main_90.png" alt="페이스북"></a>
+               </li>
+               <li>
+                   <a href="#"><img src="http://sjsweb.dothome.co.kr/house/img/main_img/main_92.png" alt="유튜브"></a>
+               </li>
+               <li>
+                   <a href="#"><img src="http://sjsweb.dothome.co.kr/house/img/main_img/main_94.png" alt="인스타그램"></a>
+               </li>
+               </ul>
+             </div>
+            
+            </div>
+            
+        </div>
+    
+    
+    </div>
+      <!-- Swiper JS --> <!--스크립트-->
+  <script src="http://sjsweb.dothome.co.kr/house/dist/js/swiper.min.js"></script>
+
+    
+    <script>
+    var swiper1 = new Swiper('.sw1_pc', {
+      slidesPerView: 1, //보여지는 슬라이드 개수
+      spaceBetween: 30, //슬라이드 사이 공간 /*0으로하면 여백없음*/
+      loop: true,  // 반복 슬라이드
+      keyboard: {
+        enabled: true,  //키보드 제어 /*슬라이드 키보드로하는거*/
+      },
+      autoplay: {
+        delay: 5000, // 5초마다 슬라이드 /*자동슬라이드임*/
+        disableOnInteraction: true, //버튼 제어시 멈춤 
+      },
+      pagination: {
+        el: '.swiper-pagination_sw1_pc',
+        clickable: true, //블릿버튼 제어
+      }
+    });
+        
+        var swiper2 = new Swiper('.sw1_mb', {
+      slidesPerView: 1, //보여지는 슬라이드 개수
+      spaceBetween: 30, //슬라이드 사이 공간 /*0으로하면 여백없음*/
+      loop: true,  // 반복 슬라이드
+      keyboard: {
+        enabled: true,  //키보드 제어 /*슬라이드 키보드로하는거*/
+      },
+      autoplay: {
+        delay: 5000, // 5초마다 슬라이드 /*자동슬라이드임*/
+        disableOnInteraction: true, //버튼 제어시 멈춤 
+      },
+      pagination: {
+        el: '.swiper-pagination_sw1_mb',
+        clickable: true, //블릿버튼 제어
+      }
+    });
+        
+     var swiper3 = new Swiper('.sw_new', {
+      slidesPerView: 4, //보여지는 슬라이드 개수
+      spaceBetween: 30, //슬라이드 사이 공간 /*0으로하면 여백없음*/
+      loop: true,  // 반복 슬라이드
+      keyboard: {
+        enabled: true,  //키보드 제어 /*슬라이드 키보드로하는거*/
+      },
+      autoplay: {
+        delay: 5000, // 5초마다 슬라이드 /*자동슬라이드임*/
+        disableOnInteraction: true, //버튼 제어시 멈춤 
+      },
+     navigation: {
+        nextEl: '.swiper-button-next_new',
+        prevEl: '.swiper-button-prev_new',
+      },
+      breakpoints:{
+           
+            768:{
+                slidesPerView: 2,
+                spaceBetween:20
+            }
+        }
+    });
+  </script>
+    
+
+    
+    
+</body>
+</html>

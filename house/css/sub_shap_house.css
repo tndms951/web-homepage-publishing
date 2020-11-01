@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+#menu{
+    border-top: 1px solid #000;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 45px;
+    width: 100%;
+    
+  
+}
+#menu ul{
+    text-align: center;
+    width: 100%;
+}
+
+#menu ul li{
+   display: inline-block;
+   cursor: pointer;
+    margin: 20px;
+    letter-spacing: 1px;
+}
+
+#menu li.on a{
+    display: block;
+    color: #ee67a3;
+}
+
+#all #box1{
+    border: 1px solid #777777;
+    display: flex;
+     margin-top: 50px;
+    cursor:pointer;
+}
+#all #box2{
+    border: 1px solid #777777;
+    display: flex;
+    margin-top: 15px;
+    cursor:pointer;
+}
+#all #box3{
+    border: 1px solid #777777;
+    display: flex;
+     margin-top: 15px;
+    cursor:pointer;
+}
+#all #box4{
+    border: 1px solid #777777;
+    display: flex;
+     margin-top: 15px;
+    cursor:pointer;
+}
+#all #box5{
+    border: 1px solid #777777;
+    display: flex;
+     margin-top: 15px;
+    cursor:pointer;
+}
+#pho img{
+    vertical-align: top;
+   
+}
+#text{
+    margin-left: 50px;
+    margin-top: 15px;
+    
+}
+#text h3{
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 30px;
+    height: 40px;
+}
+#text h4 span{
+    font-size: 13px;
+    line-height: 30px;
+    height: 30px;
+}
+#text p{
+    font-size: 14px;
+    margin-top: 10px;
+    line-height: 30px;
+    height: 30px;
+}
+
+
+/*모바일*/
+@media screen and (max-width:768px){
+    
+    #pho img{
+        width: 100%;
+        vertical-align: top;
+    } 
+    #all{
+        margin: 0 10px;
+    }
+    
+    #text h3{
+    font-weight: 500;
+    font-size: 13px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    height: 25px;
+}
+    #text h4 span{
+    font-size: 13px;
+    line-height: 30px;
+    height: 25px;
+}
+    #text p{
+    font-size: 13px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    height: 25px;
+}
+
+    
+   
+    
+    .go_top a{
+        display: none;
+    }
+    
+
+    
+    
+}
+  
+
+
+
+
+
+   /*pc*/ 
+@media screen and (min-width:769px){
+    /*go top*/
+        .go_top{
+            position: fixed;
+            bottom: 60px;
+            right: 100px;
+            color: #000;
+            background:  #969594;
+            padding: 10px;
+            z-index: 100;
+        }
+        .go_top:hover{
+            color: #fff;
+            background: #ee67a3;
+        }
+        .go_top a{
+        color: #fff;
+        }
+    
+        
+}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!--반응형웹일때 써야됨!!-->
+    <title>fire</title>
+    <!-- Link Swiper's CSS --> <!--스와이퍼-->
+    <link rel="stylesheet" href="dist/css/swiper.min.css"> 
+    <link rel="stylesheet" href="css/fire.css">
+    <script src="js/jquery-3.4.1.min.js"></script><!--제이쿼리가 위에있어야됨-->
+    
+    <script>
+    $(function(){ // JQuery 준비
+        $('#navi li .navi_sec, #navi_bg').hide();
+        
+        $('#navi, #navi_bg').mouseenter(function(){
+           $('#navi li .navi_sec, #navi_bg').stop().slideDown('fast');
+            }).mouseleave(function(){
+            $('#navi li .navi_sec, #navi_bg').stop().slideUp('fast');
+            
+        });
+        /*mouseenter, mouseleave는 mouseover, mouseout 대신에 쓴건데 이걸 쓴 이유는 오버 햇을때 더 깔끔하게 표현되기 때문이다.*/
+        
+        
+        
+        
+    }); // JQuery 종료
+    
+    </script>
+    
+    
+</head>
+<body>
+ <div id="wrap">
+     <div id="header" class="center">
+         <div class="util">
+             <ul>
+                 <li><a href="#">홈</a></li>
+                 <li><a href="#">로그인</a></li>
+                 <li><a href="#">회원가입</a></li>
+             </ul>
+
+         </div>
+        <div class="menu">
+         <h1 class="center">
+             <img src="../fire/img/logo.jpg" alt="소방">
+         </h1>
+
+         <div class="gnb center">
+             <ul>
+                 <li>
+                 <a href="#">전북소방안내</a>
+                 </li>
+                 <li>
+                 <a href="#">보도자료</a>
+                 </li>
+                 <li>
+                 <a href="#">종합민원센터</a>
+                 </li>
+                 <li>
+                 <a href="#">알림마당</a>      
+                 </li>
+                 <li>
+                 <a href="#">소방자료관</a>
+                 </li>
+             </ul>
+         </div>
+         </div><!--menu-->
+     </div>
+    
+    <div id="container">
+        <div id="contents">
+        
+    <div class="main_phowrap">
+    
+    <div class="main_pho"> <!--main_pho에 백그라운드로 이미지 넣으면됨-->
+     
+     <div class="maintext center">
+         <h2>안전하고 행복한 <span>전북소방서</span></h2>
+     </div>
+      
+       <div class="main_wrap center">
+        <ul>
+            <li><a href="#">교육신청</a></li>
+            <li><a href="#">심폐소생술</a></li> 
+        </ul> 
+        
+        <ul>
+            <li><a href="#">전국의료센터</a></li>
+            <li><a href="#">소방청</a></li>
+        </ul> 
+        </div><!--main_wrap-->
+       
+    </div><!--//main_pho-->
+    
+   
+    
+    </div><!--//main_phowrap-->
+    <div class="qick_menu">
+        <ul>
+            <li><a href="#"><span>어린이마당</span></a></li><!--li에 백그라운드 넣기-->
+            <li><a href="#"><span>안전지킴이</span></a></li>  
+            <li><a href="#"><span>자주찾는질문</span></a></li>
+            <li><a href="#"><span>체험차량</span></a></li>
+            <li><a href="#"><span>안전체험관</span></a></li>
+        </ul> 
+       
+    </div>
+    <div class="notice_all center">
+    
+   
+    <div class="notice">
+        <div class="tab_board">
+            <h3>공지사항</h3>
+            <div class="tab_menu">
+                <ul>
+                    <li><a href="#"><span>공지사항</span></a></li>
+                    <li><a href="#"><span>채용/시험정보</span></a></li>
+                    <li><a href="#"><span>자유게시판</span></a></li>
+                    <li><a href="#"><span>입찰/계약정보</span></a>
+                </ul>
+            </div>
+
+            <div class="tab_body">
+                <ul>
+                    <li>
+                        <a href="#">·중앙 소방장비 시연회 개최 안내문</a>
+                    </li>
+                    <li>
+                        <a href="#">·전북소방서 구급대원 대체인력 선발</a>
+                    </li>
+                    <li>
+                        <a href="#">·2020년 구급장비 품평회 개최(알림)</a>
+                    </li>
+                    <li>
+                       <a href="#">·소방장비정비센터 자정 신청 공고</a>
+                    </li>
+                    <li>
+                        <a href="#">·간이스프링클러 설치 지원사업 조기 추진 안내</a>
+                    </li>
+                </ul>
+            </div><!--tab_body-->
+        </div>
+        <!--tab_border-->
+    </div><!--notice-->
+  
+    
+    
+    <div class="conditions">
+        <h3>일일재난상황</h3>
+         <div class="conditions_text">
+                <ul>
+                    <li>
+                        <a href="#">·소방종합상황일보(2020.02.11 화)<span>2020-02-11</span></a>
+                    </li>
+                    <li>
+                        <a href="#">·소방종합상황일보(2020.02.10 월)<span>2020-02-10</span></a>
+                    </li>
+                    <li>
+                        <a href="#">·소방종합상황일보(2020.02.09 일)<span>2020-02-09</span></a>
+                    </li>
+                    <li>
+                       <a href="#">·소방종합상황일보(2020.02.08 토)<span>2020-02-08</span>
+                       </a>
+                    </li>
+                    <li>
+                        <a href="#">·소방종합상황일보(2020.02.07 금)<span>2020-02-07</span></a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+    
+    <div class="photo_up">
+        <div class="photo_up_wrap">
+
+            <div class="wrap01">
+                <h3>포토존</h3>
+                <div class="prev_next">
+                
+                    <button class="prev"><img src="img/btn_pop_prev.png" alt="이전"></button>
+                    <button class="next"><img src="img/btn_pop_next.png" alt="다음"></button> 
+                </div><!--prev_next-->
+            </div>
+
+            <a href="#"><img src="img/pho.gif" alt="팝업사진"></a>
+
+        </div>
+        <!--pop_up_wrap-->
+    </div>
+    <!--pop_up-->
+    </div><!--notice_all-->
+
+   <div class="method_wrap">
+    <div class="method center">
+        <h3>위기대처방법</h3>
+
+        <div class="icon">
+            <ul>
+                <li><a href="#"><span>화재시</span></a></li>
+                <li><a href="#"><span>연기속<br>대피요령</span></a></li>
+                <li><a href="#"><span>지진발생시<br>행동요령</span></a></li>
+                <li><a href="#"><span>출혈</span></a></li>
+                <li><a href="#"><span>화재건물속<br>갇혔을때</span></a></li>
+            </ul>
+        </div>
+    </div><!--method-->
+    </div><!--method_wrap-->
+
+   
+   <div class="today_wrap">
+    <div class="today center">
+        <span><a href="#">전체통계보기</a></span>
+        <div class="table01">
+        <ul>
+            <li>구분</li>
+            <li>오늘</li>
+            <li>누적</li>
+        </ul>
+        <ul>
+            <li><a href="#">화재</a></li>
+            <li><a href="#">2건</a></li>
+            <li><a href="#">158건</a></li>
+        
+        </ul>
+        <ul>
+            <li><a href="#">구조</a></li>
+            <li><a href="#">41건</a></li>
+            <li><a href="#">1,585건</a></li>
+        
+        </ul>
+        <ul>
+            <li><a href="#">구급</a></li>
+            <li><a href="#">206건</a></li>
+            <li><a href="#">6,911건</a></li>
+        
+        </ul>
+        </div><!--table01-->
+    </div><!--today-->
+
+</div><!--today_wrap-->
+
+
+   <div class="banner_wrap">
+    <div class="banner center">
+        <h3>베너모음</h3>
+
+        <button><img src="img/btn_pop_prev.png" alt="이전"></button>
+        <button><img src="img/btn_pop_next.png" alt="다음"></button>
+    </div>
+    
+    <div class="banner_photo center">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        
+    </div><!--banner_photo-->
+    </div><!--banner_wrap-->
+
+    </div><!--//contents-->
+    </div><!--//container-->
+    
+
+    <div class="footer">
+        <div class="wrap">
+            <ul class="center">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">저작권보호정책</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+        </div>
+        <div class="address">
+            <p>전라북도 전주시 완산구 효자로 225(효자동3가 1) 전북도청 16층 TEL : 063-280-3831</p>
+            
+            <form>
+                <fieldset>
+                    <legend>링크가기</legend>
+                    <div>
+                        <label for="">시도 소방본부</label>
+                        <select name="" id="fire">시도 소방본부
+                        <option value="all">시도 소방본부</option>
+                        <option value="">중앙119구조본부</option>
+                        <option value="">서울소방본부</option>
+                        <option value="">부산소방본부</option>
+                        <option value="">대구소방본부</option>
+                        <option value="">인천소방본부</option>
+                        <option value="">광주소방본부</option>
+                        <option value="">세종특별자치시소방본부</option>
+                        <option value="">창원소방본부</option>
+                        <option value="">대전소방본부</option>
+                        <option value="">울산소방본부</option>
+                        <option value="">경기소방본부</option>
+                        <option value="">강원소방본부</option>
+                        <option value="">충북소방본부</option>
+                        <option value="">충남소방본부</option>
+                        <option value="">전남소방본부</option>
+                        <option value="">경북소방본부</option>
+                        <option value="">경남소방본부</option>
+                        <option value="">제주소방본부</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">시·군·구청</label>
+                        <select name="" id="fire">시·군·구청
+                        <option value="all">시·군·구청</option>
+                        <option value="1">전북도청</option>
+                        <option value="2">전주시청</option>
+                        <option value="3">완주군청</option>
+                        <option value="4">덕진구청</option>
+                        <option value="5">완산구청</option>
+                        <option value="5">군산시청</option>
+                        <option value="5">익산시청</option>
+                        <option value="5">정읍시청</option>
+                        <option value="5">김제시청</option>
+                        <option value="5">남원시청</option>
+                        <option value="5">부안군청</option>
+                        <option value="5">고창군청</option>
+                        <option value="5">임신군청</option>
+                        <option value="5">순창군청</option>
+                        <option value="5">무주군청</option>
+                        <option value="5">장수군청</option>
+                        <option value="5">잔안군청</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="">유관기관 및 단체</label>
+                        <select name="" id="fire">유관기관 및 단체
+                        <option value="all">유관기관 및 단체</option>
+                        <option value="1">청와대</option>
+                        <option value="2">소방청</option>
+                        <option value="3">국민권익위원회</option>
+                        <option value="4">한국산업안전보건공단</option>
+                        <option value="5">한국정책방송KTV</option>
+                        <option value="5">Dynamic Korea</option>
+                        <option value="5">소방산업정보시스템</option>
+                        <option value="5">대한민국재향소방동우회</option>
+                        <option value="5">대한민국재향소방동후회 전북지부</option>
+                    </div>
+                </fieldset>
+            </form>
+ 
+           <!-- <ul>
+                <li>소방관련기관+</li>
+                <li>재난관련정보기관+</li>
+                <li>도내소방서안내+</li>
+            </ul>-->
+        </div>
+
+
+
+    </div>
+    <!--footer-->
+
+    </div>
+</body>
+</html>

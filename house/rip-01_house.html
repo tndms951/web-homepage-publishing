@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>          
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main_house</title>
+
+      <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="dist/css/swiper.min.css"> 
+    <link rel="stylesheet" href="css/house_style.css"><!--해더푸터-->
+    <link rel="stylesheet" href="css/sub01-01_house.css"><!--컨텐츠-->
+    
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/navi.js"></script>
+    <!--favicon 넣기-->
+    <!--아이폰 홈화면 아이콘-->
+    <link rel="apple-touch-icon-precomposed" href="img/Etude.png">
+    <!--pc 아이콘-->
+    <link rel="shortcht icon" href="img/Etude.png">
+   
+   <script>
+    $(function(){
+      
+        
+        $('a.heart').click(function(){
+            $(this).toggleClass('on');
+            
+            return false; /*a테그로 되어있어서 누르면 위로올라가기때문에 이걸적어야 뒤로 안올라감 하트모양!!*/
+        });
+        
+   
+         
+        $('.go_top').click(function(){
+            $('html, body').animate({
+                scrollTop : 0
+            },500);
+            return false;
+        });
+        
+        var offset = 200;
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            
+            if(st > offset  && $(this).width()>768){
+                $('.go_top').fadeIn(500);
+            }else{
+                $('.go_top').fadeOut(500);
+            }
+        });
+        $(window).resize(function(){
+             if($(this).width()<=768){
+                 $('.go_top').hide();
+             }
+         });
+        $('.option .sel').click(function(){
+            $(this).toggleClass('open');
+            if($(this).hasClass('open')){
+                $(this).find('+ul').show();
+            }else{
+                $(this).find('+ul').hide();
+            }
+        });
+        
+        $('.option ul li').click(function(){
+            $('.option ul').hide();
+           $('.option + dl dd').text('8,400원'); 
+        });
+        
+        
+        $('.tap_title li a').eq(0).addClass('on');/*헤더 활성화 시키는거 홈,신상품,베스트그부분!*/
+        
+   
+    });/*제이쿼리끝*/
+    
+    
+    </script>
+   
+</head>
+<body>    
+    <? include "header.html" ?>
+   
+     <div id="all" class="center" clearfix>
+      <div id="box1" clearfix>
+       <div id="pho">
+           <img src="img/sub1/rip_04.png" alt="립스틱 이미지">
+       </div>
+       
+        <div id="text">
+         <div id="title">
+               <span>BEST</span>
+               <h2>샤인 시크 립라커</h2>
+               
+          </div>
+          <ul class="price" clearfix>
+              <li><span>판매가</span><strong><p>12,000원</p></strong></li>
+              <li><span>할인가</span><strong><h3>30%</h3>9,600원</strong></li>
+              <li><span>스마트가</span><strong>8,400원</strong></li>
+          </ul>
+            <div class="option">
+                <div class="sel" clearfix>
+                    <span>옵션선택</span>
+                    <img src="img/sub1/xia.jpg" alt="화살표">
+                </div>
+                <ul>
+                    <li><span>레드</span><strong>9,600원</strong></li>
+                    <li><span>핑크</span><strong>9,600원</strong></li>
+                     <li><span>오렌지</span><strong>9,600원</strong></li>
+                    
+                
+                </ul>
+            </div>
+            <dl>
+                <dt>총 상품 금액</dt>
+                <dd>0원</dd>
+            </dl>
+             <div class="button center">
+                 <a href="#"><span>바로구매</span></a>
+                 <a href="#"><strong>장바구니 담기</strong></a>
+             </div>       
+         </div>
+         </div><!--box1-->
+         
+         
+         
+         <!--////box2/////////////-->
+         <div id="box2" class="center">
+             <ul class="tap_title">
+                 <li><a>상품정보</a></li>
+                 <li><a>상품리뷰 (285)</a></li>
+                 <li><a>배송/교환/반품</a></li>
+             </ul>
+             
+             <div class="pro_list">
+                 <div class="pro_list1">
+                     <img src="img/sub1/rip_pho01.jpg">
+                     <img src="img/sub1/rip_pho02.jpg">
+                 </div>
+                 
+                <div class="pro_list2"><!--상품리뷰-->
+                     
+                 </div>
+                 <div class="pro_list3"><!--배송/환불-->
+                     
+                 </div>
+             </div><!--pro_list-->
+             
+         </div>
+         
+         
+         <!--//////////box3////////////-->
+         <div id="box3">
+            <div id="other">
+            <div class="other_text">
+             <strong>다른 고객들이 많이 찾는 상품</strong>
+             </div>
+             <!--<div class="shap">
+                 <span><img src="img/sub1/main_35.png" alt="이전"></span><p><img src="img/sub1/main_36.png" alt="다음"></p>
+             </div>-->
+             
+               <div class="swiper-button-prev swiper-button-prev_new"></div>
+                <!--이전-->
+                <div class="swiper-button-next swiper-button-next_new"></div>
+                <!--다음-->
+                </div><!--other-->
+    
+             <div id="pho_1" class="swiper-container center">
+                 <ul class="swiper-wrapper">
+                     <li class="swiper-slide">
+                         <a href="#"><img src="img/sub2/1.png" alt="에어 마스크">
+                         <span>0.2 테라피 에어 마스크</span>
+                         <strong>1,000원</strong>
+                         </a>
+                     </li>
+                      <li class="swiper-slide">
+                         <a href="#"><img src="img/sub2/2.png" alt="러블리 블러셔">
+                          <span>러블리 쿠키 블러셔</span>
+                         <strong>6,000원</strong>
+                         </a>
+                     </li>
+                      <li class="swiper-slide">
+                         <a href="#"><img src="img/sub2/3.png" alt="클렌징오일">
+                         <span>리얼아트 클렌징 오일 모이스처 NEW</span>
+                         <strong>10,800원</strong>
+                         </a>
+                     </li>
+                     <li class="swiper-slide">
+                         <a href="#"><img src="img/main_img/best_03.png" alt="스킨">
+                         <span>리얼 프로폴리스 에멀전 150ml</span>
+                         <strong>25,000원</strong>
+                         </a>
+                     </li>
+                 </ul>
+                 
+                 
+             </div>
+             
+             
+             
+             
+             
+             
+         </div>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+     </div> <!--all--> 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        <div class="go_top"><a href="#">Go Top</a></div>
+            
+   
+<? include "footer.html" ?>
+    
+     
+  
+   
+   <!-- Swiper JS -->
+  <script src="dist/js/swiper.min.js"></script>
+     <script>
+    var swiper1 = new Swiper('.swiper-container', {
+      slidesPerView: 4, //보여지는 슬라이드 개수
+      spaceBetween: 60, //슬라이드 사이 공간 /*0으로하면 여백없음*/
+      loop: true,  // 반복 슬라이드
+     
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true, //블릿버튼 제어
+      },
+        navigation: {
+        nextEl: '.swiper-button-next_new',
+        prevEl: '.swiper-button-prev_new',
+      },
+         breakpoints:{
+           
+            768:{
+                slidesPerView: 2,
+                spaceBetween:20
+            }
+        }
+    });
+         
+         
+         
+    </script>
+    
+</body>
+</html>

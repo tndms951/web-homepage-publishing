@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>          
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main_house</title>
+
+      <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="dist/css/swiper.min.css"> 
+    <link rel="stylesheet" href="css/time_style.css">
+    <link rel="stylesheet" href="css/house_style.css"><!--해더푸터-->
+    <link rel="stylesheet" href="css/sub05_house.css"><!--컨텐츠-->
+    
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/navi.js"></script>
+    <!--favicon 넣기-->
+    <!--아이폰 홈화면 아이콘-->
+    <link rel="apple-touch-icon-precomposed" href="img/Etude.png">
+    <!--pc 아이콘-->
+    <link rel="shortcut icon" href="img/Etude.png">
+   
+   <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+   <!--글꼴-->
+   
+    
+   <script>
+    $(function(){
+       
+        
+       
+         
+        $('.go_top').click(function(){
+            $('html, body').animate({
+                scrollTop : 0
+            },500);
+            return false;
+        });
+        
+        var offset = 200;
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            
+            if(st > offset  && $(this).width()>768){
+                $('.go_top').fadeIn(500);
+            }else{
+                $('.go_top').fadeOut(500);
+            }
+        });
+        $(window).resize(function(){
+             if($(this).width()<=768){
+                 $('.go_top').hide();
+             }
+         })
+        
+        
+        
+        $('#pro ul li').click(function(){
+            $('#pro ul').hide();
+            $('#pro_wrap').text($(this).text());  
+            $('#pro #pro_wrap').removeClass('open');
+        });
+        
+      
+        $('.clearfix2 li').eq(5).addClass('on');/*헤더 활성화 시키는거 홈,신상품,베스트그부분!*/
+        $('#menu li').eq(0).addClass('on');//*서브안에 메뉴 활성화시킨거
+   
+    });/*제이쿼리끝*/
+    
+    
+    </script>
+   
+</head>
+<body>    
+    <? include "header.html" ?>
+   <div id="all">
+    <div id="menu">
+       <ul class="center">
+           <li>
+              <a href="sub05_house.html">브랜드소개</a> 
+           </li>
+           <li>
+              <a href="sub_shap_house.html">매장안내</a> 
+           </li>
+           <li>
+             <a href="http://sjsweb.dothome.co.kr/xe/products_review">이용후기</a>
+           </li>
+       </ul>
+   </div>
+   </div><!--all-->
+   
+   <div id="ph_all">
+   <!--<div id="pho">
+       <img src="img/sub5/p1.jpg" alt="사진1">
+   </div>-->
+   
+   <div id="pho2">
+      <div>
+       <iframe width="400" height="300" src="https://www.youtube.com/embed/d3vbxpcStvA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       </div>
+   </div>
+   
+   </div>
+   
+   
+   
+
+  <section class="cd-timeline js-cd-timeline">
+    <div class="container max-width-lg cd-timeline__container">
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img cd-timeline__img--picture">
+          <img src="img/sub5/p2.png" alt="Picture">
+        </div> <!-- cd-timeline__img -->
+
+        <div class="cd-timeline__content text-component">
+          <h2>ETUDE Lovely</h2>
+          <span><img src="img/sub5/img_etude_01.jpg"></span>
+          <p class="color-contrast-medium">에뛰드와 함께라면 바라만 보고 있어도 기분 좋아지는 핑크빛 감성과
+        상상만으로 설레는 이야기들을 나누면서 소녀들도 자신만의
+        러블리한 스윗함을 마음껏 표현할 수 있게 될 거에요. <br><br>
+
+        With ETUDE young girls would be able to express their unique
+        lovely sweetness while sharing the pink sentiments that
+        uplift you and the stories that excite you when you imagine.</p>
+
+          <div class="flex justify-between items-center">
+            <span class="cd-timeline__date"><img src="img/sub5/img_etude_01_s.jpg"></span>
+            
+          </div>
+        </div> <!-- cd-timeline__content -->
+      </div> <!-- cd-timeline__block -->
+
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img cd-timeline__img--movie">
+         <img src="img/sub5/p2.png" alt="Picture">
+        </div> <!-- cd-timeline__img -->
+
+        <div class="cd-timeline__content text-component">
+          <h2>ETUDE Trendy</h2>
+          <span><img src="img/sub5/img_etude_02.jpg"></span>
+          <p class="color-contrast-medium">뷰티 아이콘이 되길 바라는 소녀들의 달콤한 상상, 에뛰드에서 현실이
+        될 거예요. 에뛰드에서 발견할 수 있는 새로운 아이디어와 기발한
+        시도들이 소녀들에게 닿으면 평범한 일상도 뒤집을 수 있는 영감을
+        받을 수 있거든요. 트렌드 리더로 스윗한 현실을 즐겨보세요.<br><br>
+
+        The sweet imagination of girls who wish to be beauty icons will
+        come true at ETUDE.  When the new ideas and innovative
+        attempts you can discover at ETUDE, even ordinary girls can
+        be inspired to turn an ordinary day upside down.
+        Enjoy a sweet life as a trend-setter.</p>
+          
+          <div class="flex justify-between items-center">
+            <span class="cd-timeline__date"><img src="img/sub5/img_etude_02_s.jpg"></span>
+          </div>
+        </div> <!-- cd-timeline__content -->
+      </div> <!-- cd-timeline__block -->
+
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img cd-timeline__img--picture">
+          <img src="img/sub5/p2.png" alt="Picture">
+        </div> <!-- cd-timeline__img -->
+
+        <div class="cd-timeline__content text-component">
+          <h2>ETUDE Playful</h2>
+          <span><img src="img/sub5/img_etude_03.jpg"></span>
+          <p class="color-contrast-medium">다양하고 감각적인 컬러를 고르는 재미. 귀여운 웃음이 터질만큼
+        유쾌한 제품을 만나는 즐거움으로 습관이던 화장이 함께 나누고 싶은
+        즐거운 놀이가 될 것입니다. 매일 매일 에뛰드와 함께 새로운
+        아름다움을 찾는 일, 달콤한 축제가 되어 소녀들을 신나게 해줄 거에요.<br><br>
+
+        The fun of picking various sensible colors and the pleasure
+        of meeting interesting products that make you smile will
+        make everyday makeup a fun play that you want to share.
+        Discovering new beauty everyday with ETUDE.
+        It will be a sweet festival just for the girls.</p>
+
+          <div class="flex justify-between items-center">
+            <span class="cd-timeline__date"><img src="img/sub5/img_etude_03_s.jpg"></span>
+           
+          </div>
+        </div> <!-- cd-timeline__content -->
+      </div> <!-- cd-timeline__block -->
+    </div>
+  </section> <!-- cd-timeline -->
+  <script src="js/time_style.js"></script>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+      
+        <div class="go_top"><a href="#">Go Top</a></div>
+            
+   
+    <? include "footer.html" ?>
+    
+     
+  
+   
+   <!-- Swiper JS -->
+  <script src="dist/js/swiper.min.js"></script>
+     <script>
+    var swiper1 = new Swiper('.swiper-container', {
+      slidesPerView: 3, //보여지는 슬라이드 개수
+      spaceBetween: 60, //슬라이드 사이 공간 /*0으로하면 여백없음*/
+      loop: true,  // 반복 슬라이드
+     
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true, //블릿버튼 제어
+      },
+        navigation: {
+        nextEl: '.swiper-button-next_new',
+        prevEl: '.swiper-button-prev_new',
+      },
+         breakpoints:{
+           
+            768:{
+                slidesPerView: 2,
+                spaceBetween:20
+            }
+        }
+    });
+         
+         
+         
+    </script>
+    
+</body>
+</html>

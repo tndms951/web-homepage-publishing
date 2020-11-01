@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+
+
+#best{
+    text-align: center;
+    background: #ebc0af;
+    width: 100%;
+    padding-bottom: 10px;
+    
+   
+}
+#best .center{
+   position: relative;
+    
+}
+
+#best .swiper-container{
+    width: 90%;  
+    margin: 0 auto;
+    padding-top: 40px;
+}
+#best ul li a{
+    
+    border: 3px solid #ee67a3;
+    background: #fff;
+    display: block;
+    box-sizing: border-box;
+      width: 90%;
+    margin: 0 auto;
+    
+}
+#best ul li span img{
+    width: 40px;
+    position: absolute;
+    top: -37px;
+    left: 20px;
+}
+#best ul li h3{
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    
+}
+#best ul li h4{
+    font-weight: normal;
+    font-size: 13px;
+    margin-bottom: 10px;
+    
+}
+.a{
+    margin-right: 10px;
+}
+
+.b{
+     margin-right: 10px;
+}
+
+#best img{
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;    
+}
+.swiper-wrapper{
+    padding-bottom: 30px;
+}
+
+
+
+/*이전다음 모양 이미지바꾸기*/
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    background-image: url(../img/main_img/main_37.png)
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+    background-image: url(../img/main_img/main_40.png)
+}
+
+/*////////box1/////////*/
+
+
+#all img{
+    width: 100%;
+}
+.box1 ul li{
+   margin-bottom: 20px;
+}
+
+.box{
+    position: relative;
+    margin: 20px;
+}
+.box h1{
+    width: 20%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+}
+
+.box5 h1{
+    color: #000;
+}
+
+.box6 h1{
+    color: #000;
+}
+
+
+
+
+
+
+
+
+/*모바일*/
+@media screen and (max-width:768px){
+   
+    #best ul li h3{
+        font-size: 15px;
+    }
+    
+    .box h1{
+        font-size: 15px;
+    }
+    
+    
+    
+    
+    
+    .go_top a{
+        display: none;
+    }
+    
+    
+}
+  
+
+
+
+
+
+   /*pc*/ 
+@media screen and (min-width:769px){
+    /*go top*/
+        .go_top{
+            position: fixed;
+            bottom: 60px;
+            right: 100px;
+            color: #000;
+            background:  #969594;
+            padding: 10px;
+        }
+        .go_top:hover{
+            color: #fff;
+            background: #ee67a3;
+        }
+        .go_top a{
+        color: #fff;
+        }
+    
+        .photo ul li:hover .over_box{
+            opacity: 1;    
+            visibility: visible;
+
+        }
+}

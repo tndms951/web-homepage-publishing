@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>          
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main_house</title>
+
+      <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="dist/css/swiper.min.css"> 
+    <link rel="stylesheet" href="css/house_style.css"><!--해더푸터-->
+    <link rel="stylesheet" href="css/sub03_house.css"><!--컨텐츠-->
+    
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/navi.js"></script>
+    <!--favicon 넣기-->
+    <!--아이폰 홈화면 아이콘-->
+    <link rel="apple-touch-icon-precomposed" href="img/Etude.png">
+    <!--pc 아이콘-->
+    <link rel="shortcut icon" href="img/Etude.png">
+   
+   <script>
+    $(function(){
+       
+        $('#menu li').eq(1).addClass('on');//서브안에 메뉴 활성화시킨거
+        
+        $('a.heart').click(function(){
+            $(this).toggleClass('on');
+            
+            return false; //a테그로 되어있어서 누르면 위로올라가기때문에 이걸적어야 뒤로 안올라감 하트모양!!
+        });
+        
+         
+        $('.go_top').click(function(){
+            $('html, body').animate({
+                scrollTop : 0
+            },500);
+            return false;
+        });
+        
+        var offset = 200;
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            
+            if(st > offset  && $(this).width()>768){
+                $('.go_top').fadeIn(500);
+            }else{
+                $('.go_top').fadeOut(500);
+            }
+        });
+        $(window).resize(function(){
+             if($(this).width()<=768){
+                 $('.go_top').hide();
+             }
+         })
+        
+        
+        
+        $('#pro #pro_wrap').click(function(){
+            $(this).toggleClass('open');
+            if($(this).hasClass('open')){
+                $(this).find('+ul').show();
+            }else{
+                $(this).find('+ul').hide();
+            }
+        });/*판매순 인기순*/
+        
+        $('#pro ul li').click(function(){
+            $('#pro ul').hide();
+            $('#pro_wrap').text($(this).text());  
+            $('#pro #pro_wrap').removeClass('open');
+        });
+        
+   $('.clearfix2 li').eq(3).addClass('on'); /*헤더 활성화부분!*/     
+   
+    });/*제이쿼리끝*/
+    
+    
+    </script>
+   
+</head>
+<body>    
+    <? include "header.html" ?>
+   <div id="all">
+    <div id="menu">
+       <ul class="center">
+           <li>
+              <a href="#">전체</a> 
+           </li>
+           <li>
+              <a href="#">아이</a> 
+           </li>
+           <li>
+             <a href="#">립</a>
+           </li>
+           <li>
+              <a href="#">페이스</a>  
+           </li>
+       </ul>
+   </div>
+   
+   <div id="pro" class="center clearfix">
+      <div id="pro_list">
+          <div id="pro_wrap">
+           판매순
+           </div>
+        <ul>
+           <li>인기순</li>
+           <li>추천순</li>
+       </ul>
+      </div>
+       
+   </div>
+   
+   
+   </div>
+   
+<div id="new">
+
+   <!--///두번째 박스////-->
+    <div id="new_box2" class="photo center"> 
+        <ul>
+            <li class="center">
+               <a href="sub03-01_house.html">
+                <h3>럭스 온 아이즈 </h3>
+                <div class="pho">
+                <img src="img/sub3,4/eye-1.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>9,600원</span>
+                   <p>12,000원</p>
+                </section>
+                 </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub03-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+               
+            </li>
+            <li class="center">
+               <a href="sub03-01_house.html">
+                <h3>[공식몰단독] 가을 데일리 음영 메이크업 LOOK SET</h3>
+                <div class="pho">
+                <img src="img/sub3,4/eye-2.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>9,600원</span>
+                   <p>12,000원</p>
+                </section>
+                </a>
+                 <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub03-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+                
+            </li>
+            <li class="center">
+               <a href="sub03-01_house.html">
+                <h3>청순거짓 브라우 디자이닝 듀오</h3>
+                <div class="pho">
+                <img src="img/sub3,4/eye-3.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>9,600원</span>
+                   <p>12,000원</p>
+                </section>
+                 </a>
+                 <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub03-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+               
+            </li>
+        
+        </ul>
+        
+        
+        
+        
+        
+        <ul>
+            <li class="center">
+               <a href="sub03-01_house.html">
+                <h3>래쉬 펌 볼륨 픽스 마스카라</h3>
+                <div class="pho">
+                <img src="img/sub3,4/eye-4.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>9,600원</span>
+                   <p>12,000원</p>
+                </section>
+                 </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub03-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+               
+            </li>
+            <li class="center">
+               <a href="sub03-01_house.html">
+                <h3>룩 앳 마이 아이즈 메이플 로드</h3>
+                <div class="pho">
+                <img src="img/sub3,4/eye-5.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>8,800원</span>
+                   <p>11,000원</p>
+                </section>
+                </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub03-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+                
+            </li>
+            <li class="center">
+               <a href="sub03-01_house.html">
+                <h3>미러 홀릭 리퀴드 아이즈</h3>
+                <div class="pho">
+                <img src="img/sub3,4/eye-6.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>14,400원</span>
+                   <p>18,000원</p>
+                </section>
+                </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub03-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+                
+            </li>
+        
+        
+        
+        </ul>
+        
+        <ul>
+            <li class="center">
+               <a href="sub03-01_house.html">
+                <h3>드로잉 아이브라우 하드 펜슬</h3>
+                <div class="pho">
+                <img src="img/sub3,4/eye-7.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>9,600원</span>
+                   <p>12,000원</p>
+                </section>
+                 </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub03-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+               
+            </li>
+            <li class="center">
+               <a href="sub03-01_house.html">
+                <h3>이지 핏 젤 아이라이너</h3>
+                <div class="pho">
+                <img src="img/sub3,4/eye-8.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>8,800원</span>
+                   <p>11,000원</p>
+                </section>
+                </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub03-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+                
+            </li>
+            <li class="center">
+               <a href="#">
+                <h3>플레이 컬러 아이즈 라벤더 랜드</h3>
+                <div class="pho">
+                <img src="img/sub3,4/eye-9.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>14,400원</span>
+                   <p>18,000원</p>
+                </section>
+                </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub03-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+                
+            </li>
+        
+        
+        
+        </ul>
+        
+        
+        
+        <ul>
+            <li class="center">
+               <a href="sub03-01_house.html">
+                <h3>플레이 101 펜슬 NEW</h3>
+                <div class="pho">
+                <img src="img/sub3,4/eye-10.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>9,600원</span>
+                   <p>12,000원</p>
+                </section>
+                 </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub03-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+               
+            </li>
+            <li class="center">
+               <a href="sub03-01_house.html">
+                <h3>퀵앤이지 매트&amp;글리터 리퀴드 섀도우</h3>
+                <div class="pho">
+                <img src="img/sub3,4/eye-11.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>8,800원</span>
+                   <p>11,000원</p>
+                </section>
+                 </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub03-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+               
+            </li>
+            <li class="center">
+               <a href="sub03-01_house.html">
+                <h3>퀵앤이지 피니쉬 섀도우&amp;라이너</h3>
+                <div class="pho">
+                <img src="img/sub3,4/eye-12.png">
+                </div>
+                 <section class="center">
+                   <h4>20%</h4>
+                   <span>14,400원</span>
+                   <p>18,000원</p>
+                </section>
+                </a>
+                <div class="over_box">
+                    <ul>
+                        <li>
+                            <a href="sub03-01_house.html">구매하기</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+
+                        <li>
+                           <span>
+                            <a href="#" class="heart">찜하기
+                            </a>
+                            </span>
+                        </li>
+                    </ul>
+                    
+                </div> <!--over_box-->
+                
+            </li>
+        
+        
+        
+        </ul>
+        
+        
+        
+    </div><!--new_box2-->
+    
+    
+</div>
+      
+        <div class="go_top"><a href="#">Go Top</a></div>
+            
+   
+    <? include "footer.html" ?>
+    
+     
+  
+   
+   <!-- Swiper JS -->
+  <script src="dist/js/swiper.min.js"></script>
+     <script>
+    var swiper1 = new Swiper('.swiper-container', {
+      slidesPerView: 3, //보여지는 슬라이드 개수
+      spaceBetween: 60, //슬라이드 사이 공간 /*0으로하면 여백없음*/
+      loop: true,  // 반복 슬라이드
+     
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true, //블릿버튼 제어
+      },
+        navigation: {
+        nextEl: '.swiper-button-next_new',
+        prevEl: '.swiper-button-prev_new',
+      },
+         breakpoints:{
+           
+            768:{
+                slidesPerView: 2,
+                spaceBetween:20
+            }
+        }
+    });
+         
+         
+         
+    </script>
+    
+</body>
+</html>

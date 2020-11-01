@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>          
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main_house</title>
+
+      <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="dist/css/swiper.min.css"> 
+    <link rel="stylesheet" href="css/house_style.css"><!--해더푸터-->
+    <link rel="stylesheet" href="css/sub02_house.css"><!--컨텐츠-->
+    
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/navi.js"></script>
+    <!--favicon 넣기-->
+    
+    <!--아이폰 홈화면 아이콘-->
+    <link rel="apple-touch-icon-precomposed" href="img/Etude.png">
+    <!--pc 아이콘-->
+    <link rel="shortcht icon" href="img/Etude.png">
+   
+   <script>
+     $(function(){ //JQuery 준비
+        
+          $('.go_top').click(function(){
+            $('html, body').animate({
+                scrollTop : 0
+            },500);
+            return false;
+        });
+        
+        var offset = 200;
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            
+            if(st > offset && $(this).width()>768){
+                $('.go_top').fadeIn(500);
+            }else{
+                $('.go_top').fadeOut(500);
+            }
+        });
+         $(window).resize(function(){
+             if($(this).width()<=768){
+                 $('.go_top').hide();
+             }
+        });
+         
+         
+         $('.clearfix2 li').eq(2).addClass('on');/*헤더 활성화 시키는거 홈,신상품,베스트그부분!*/
+     });
+    </script>
+</head>
+<body>    
+     <? include "header.html" ?>
+   
+    
+    
+<div id="wrap">
+    <div id="best">
+    <div class="center">
+    <div class="swiper-container">
+        <ul class="swiper-wrapper">
+            <li class="a swiper-slide">
+               
+                <a href="rip-01_house.html"><img src="img/sub2/1.png" alt="마스크팩">
+                <h3>1위</h3>
+                <h4>0.2 테라피 에어 마스크</h4>
+                <span><img src="img/sub2/king.png" alt="왕관이미지"></span>
+                </a>
+                
+            </li>
+             <li class="b swiper-slide">
+                <a href="rip-01_house.html"><img src="img/sub2/2.png" alt="블러셔">
+                 <h3>2위</h3>
+                <h4>러블리 쿠키 블러셔</h4>
+                </a>
+            </li>
+             <li class="c swiper-slide">
+                <a href="rip-01_house.html"><img src="img/sub2/3.png" alt="클렌징오일">
+                 <h3>3위</h3>
+                <h4>리얼아트 클렌징 오일 모이스처</h4>
+                </a>
+            </li>
+            
+        </ul>
+                
+     
+    </div>
+    <div class="swiper-button-prev swiper-button-prev_new"></div>
+                <!--이전-->
+     <div class="swiper-button-next swiper-button-next_new"></div>
+                <!--다음-->
+                </div>
+    </div> 
+      
+           
+    <div id="all" class="center">
+       <div class="box1 box">
+           <ul>
+               <li>
+                   <a href="rip_house.html"><img src="img/sub2/sub01.png" alt="rip"></a>
+                   <h1>rip</h1>
+               </li>
+           </ul>
+       </div>
+       <div class="box2 box">
+           <ul>
+               <li>
+                   <a href="rip_house.html"><img src="img/sub2/sub02.png" alt="rip"></a>
+                   <h1>EYES</h1>
+               </li>
+           </ul>
+       </div>
+        <div class="box3 box">
+           <ul>
+               <li>
+                   <a href="rip_house.html"><img src="img/sub2/sub03.png" alt="rip"></a>
+                   <h1>FACE</h1>
+               </li>
+           </ul>
+       </div>
+        <div class="box4 box">
+           <ul>
+               <li>
+                   <a href="rip_house.html"><img src="img/sub2/sub04.png" alt="rip"></a>
+                   <h1>SKIN</h1>
+               </li>
+           </ul>
+       </div>
+         <div class="box5 box">
+           <ul>
+               <li>
+                   <a href="rip_house.html"><img src="img/sub2/sub05.png" alt="rip"></a>
+                   <h1>MASK PACK</h1>
+               </li>
+           </ul>
+       </div>
+     <div class="box6 box">
+           <ul>
+               <li>
+                   <a href="rip_house.html"><img src="img/sub2/sub06.png" alt="rip"></a>
+                   <h1>NAIL</h1>
+               </li>
+           </ul>
+       </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div><!--all-->     
+   
+   
+     </div> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="go_top"><a href="#">Go Top</a></div>
+    
+    
+    <? include "footer.html" ?>
+     
+     
+     
+     
+     
+     
+     <!-- Swiper JS -->
+  <script src="dist/js/swiper.min.js"></script>
+     <script>
+    var swiper1 = new Swiper('.swiper-container', {
+      slidesPerView: 3, //보여지는 슬라이드 개수
+      spaceBetween: 60, //슬라이드 사이 공간 /*0으로하면 여백없음*/
+      loop: true,  // 반복 슬라이드
+     
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true, //블릿버튼 제어
+      },
+        navigation: {
+        nextEl: '.swiper-button-next_new',
+        prevEl: '.swiper-button-prev_new',
+      },
+         breakpoints:{
+           
+            768:{
+                slidesPerView: 2,
+                spaceBetween:20
+            }
+        }
+    });
+         
+         
+         
+    </script>
+  
+   
+  
+    
+</body>
+</html>

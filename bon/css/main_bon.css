@@ -1,0 +1,891 @@
+@charset "utf-8";
+
+/*스타일 초기화*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: #333;
+    font: 12px '나눔고딕', sans-serif;
+    margin-top: 20px; 
+    background: #e5dcc7;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+div{
+    box-sizing: border-box;/*정해진 사이즈 안에서 밖으로 나가지 않는다는것*/
+}
+.center{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
+
+/*///////logo/////////*/
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 100;
+   
+    background: rgba(225,217,194,1);
+}
+#all{
+    display: flex;
+    color: #000;
+    height: 110px;
+}
+#id{
+    
+}
+#id ul{
+    display: flex;
+    float: right;
+    margin-top: 10px;
+    
+    
+}
+#id ul li{
+    margin-left: 20px;
+}
+#id ul li a:hover{
+    text-decoration: underline;
+}
+#nav{
+    text-align: center;
+    width: 70%;
+    position: relative;
+}
+#nav> ul{
+    display: flex;
+    background: #e1d9c2; 
+    width: 100%;
+    height: 45px;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-top: 50px;
+}
+#nav> ul >li{
+   width: 20%;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+#nav> ul >li> a{
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+    line-height: 25px;
+    
+}
+#nav> ul >li> a:hover{
+    color: #6e0000;    
+}
+#img_wrap .swiper-slide{
+    width: 100%;
+   text-align: center;
+
+  
+}
+#img_wrap .swiper-slide img{
+     max-width: 1300px;
+     width: 100%;
+     
+} 
+
+/*모바일메뉴*/
+#mb_navi{
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    right: -100%;
+    height: 100%;
+    z-index: 300;
+    box-sizing: border-box;
+    background: #e1d9c2;
+}
+
+#login{
+    
+}
+
+#login ul{
+    display: flex;
+    padding: 10px;
+}
+#login > ul > li{
+    background: #d4c5a4;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #666;
+    border-right: none;
+}
+#login > ul > li:nth-child(3){
+    border: 1px solid #666;
+}
+
+#login ul li a{
+    font-size: 13px;
+    font-weight: 500;
+    
+}
+#login ul li a:hover{
+    color: #830101;
+    
+}
+
+#mb_navi span{
+    cursor: pointer;
+}
+
+#sm_menu span{
+   border-bottom: 1px solid #666;
+   display: block;
+    font-size: 15px;
+    text-indent: 10px;
+    background: #c7ae75;
+    
+  
+}
+#sm_menu > ul >li:nth-child(1) span{
+    border-top: 1px solid #666;
+}
+#sm_menu span a{
+    display: block;
+    color: #ececec;
+    padding: 10px;
+    font-weight: 500;
+}
+
+#sm_menu > ul > li{
+    /*width: 100%;
+    background: #d4c5a4;
+    border: 1px solid #666;
+    text-indent: 10px;*/
+   
+}
+
+.menu_sec ul li{
+    border-bottom: 1px solid #666;
+    padding: 13px;
+    display: block;
+}
+.menu_sec ul li a{
+    display: block;
+}
+.menu_sec ul li a:hover{
+    color: #830101;     
+}
+
+
+.menu_sec ul li{
+    border-top: none;
+}
+
+#pho1{
+   background: url(../img/bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+
+
+.text1 h1{
+    margin-top: 10%;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 55px;
+}
+.text1 span{
+    font-size: 11px;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+
+
+
+/*#scr{
+    background: linear-gradient(to bottom, rgba(247,228,183,0) 26%,rgba(247,228,183,1) 27%,rgba(247,228,183,1) 69%,rgba(247,228,183,1) 71%,rgba(247,228,183,0) 72%,rgba(157,213,58,0) 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f7e4b7', endColorstr='#009dd53a',GradientType=0 );
+    background: url(../img/books.png) center no-repeat;
+   
+    
+}*/
+
+
+#pho_01 img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+
+}
+
+#nav ul li .sub{
+    background:  #e1d9c2;
+   width: 100%;
+    z-index: 100;
+    padding-bottom: 15px;
+    display: none;
+    position: absolute;
+}
+
+#nav ul li ul{
+    display: block;
+}
+#nav ul li ul li{
+    font-size: 14px;
+    margin-top: 13px;
+    line-height: 18px;
+}
+#nav ul li ul li a{
+    display: block;
+}
+#nav ul li ul li a:hover{
+    color: #6e0000; 
+}
+
+#pho1 .text1{
+   position: absolute;
+    top: 35%;
+    left: -60%;
+    transition: all 2s;
+    opacity: 0;
+    
+    
+}
+#pho1.info .text1{
+    left: 10%;
+    opacity: 1;
+}
+
+/*/////pho2/////*/
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #e5dcc7;
+}
+#pho2_wrap{
+     position: relative;
+    z-index: 10;
+}
+#pho2{
+    background: url(../img/bg_03.jpg) center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+   
+    
+}
+#pho2 #cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+}
+.title_02{
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    left: -60%;
+    transition: all 1.3s;
+    opacity: 0;
+    
+}
+#pho2.active .title_02{
+    left: 8%;
+    opacity: 1;
+}
+.title_02 > h3{
+    font-size: 45px;
+    color: #fff;
+    font-family: sans-serif;
+    
+}
+
+.box1{
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    right: 0;
+    background: #1f1f1f;
+    color: #fff;
+    padding: 20px;
+    transition: all 1.8s;
+    opacity: 0; 
+    z-index: 1;
+
+}
+#pho2.active .box1{
+    bottom: 0;
+    opacity: 1;
+}
+.box1 ul li span{
+    display: block;
+}
+.box1 ul{
+    display: flex;
+    justify-content: center;
+}
+.box1 ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4e4e4e;
+    border-radius: 110px;
+    width: 100px;
+    height: 100px;
+    font-size: 13px;
+    text-align: center;
+    margin: 0 20px;
+    border-radius: 50px;
+    flex-direction: column; /*아래로내려가게하는거flex block같이 쓸수없어서 이걸쓰면 아래로 떨어*/
+}
+.box1 a{
+    color: #fff;
+}
+#pho2_wrap{
+    width: 100%;
+    height: 100%;
+}
+
+.box2{
+    position: absolute;
+    top: -30%;
+    left: 44%;
+    right: 0;
+    transition: all 3s 0.7s;
+    opacity: 0;
+}
+.box2 img{
+   
+}
+
+#pho2.active .box2{
+    top: 20%;
+    opacity: 1;
+}
+
+
+
+/*//////////pho3////////////*/
+#pho3{
+    z-index: 100;
+    
+   
+}
+#pho3 #cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.9);
+}
+#pho3_wrap{
+    width: 100%;
+    height: 100%;
+    background: url(../img/bon-03.png) center no-repeat;
+     background-size: cover;/*이미지썼을때 아래 부분 덮게하는거*/
+}
+
+#menu{
+    margin-top: 200px;
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    z-index: 100;
+    left: calc(50% - 93px);
+    opacity: 0;
+    bottom:0;
+}
+#menu ul{
+    
+}
+
+#scr{
+    padding-top: 13%;
+}
+
+#pho3.active #menu{
+    bottom: 0;
+    opacity: 1;
+    transition: all 3s;
+}
+#pho3_wrap ul li{
+    text-align: center;
+}
+
+#pho3_wrap ul li h3{
+    color: #fff;
+    font-weight: 100px;
+    margin-bottom: 20px;
+    font-size: 30px;   
+   
+}
+
+#pho3_wrap ul li span{
+    color: #fff;
+    background: #4e4e4e;
+    width: 10%;
+    height: 10%;
+    padding: 10px;
+    font-weight: normal;
+    font-size: 15px;   
+
+}
+
+#pho3_wrap ul li span:hover{
+    background: #191919;
+}
+
+
+#pho3 #cover{ /*위에검정바탕만듬*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+
+
+/*//////////pho4////////////////*/
+
+#pho4_wrap{
+    width: 100%;
+    height: 100%;
+    background: url(../img/bg_04.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#pho4 #cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+#box_wrap{
+ 
+}
+#wram{
+    text-align: center;
+    color:#fff;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+
+#icon{
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 200px;
+    z-index: 100;
+    transition: all 1.8s;
+    opacity: 0;
+    bottom: -30%;
+    position: absolute;
+    top: 50%
+   
+    
+}
+#pho4.active #icon{
+     opacity: 1;
+    bottom: 0;
+}
+#icon ul{
+    display: flex;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    width: 70%;
+    text-align: center;
+    justify-content: space-around;
+ 
+     
+}
+#icon h2 {
+    color: #fff;
+    display: block;
+    font-size:20px;
+}
+#icon ul li{
+    text-align: center;
+    
+    
+}
+#icon ul li a{
+    font-size: 15px;
+    font-weight: 200;
+    color: #eee;
+}
+#icon ul li a:hover{
+    color: #dfad26
+}
+#icon ul li span{
+    display: block;
+}
+#icon ul li img{
+    width: 80%;
+    max-width: 120px;
+     
+}
+#icon ul li:hover{
+    
+}
+    
+
+.ha{
+    display: none;
+}
+
+
+/*///////////pho5//////////////*/
+
+
+#pho5{
+    margin-top: 40px;
+}
+#sns ul li{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 70px;
+    letter-spacing: 2px;
+    
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    margin-top: 20px;
+    
+}
+
+li:before{
+    content:attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1.01em;
+    transform: rotateX(180deg);
+    transform-origin: bottom;
+    
+    background: linear-gradient(to top,#fff 0%, #e5dcc7 80%);
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: 0.5;
+}
+
+
+
+#sns_pho{
+    margin-top: 15px;
+}
+#sns_pho ul{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#sns_pho ul li{
+    margin: 20px;
+    
+}
+#sns_pho ul li img{
+    width: 100%;
+}
+
+
+
+/*오버했을때 확대되는거*/
+.img_box{
+    display: block;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+}
+
+.img_box > img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    
+}
+#footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#pic{
+    background: #afa697;
+    width: 100%;
+
+    
+}
+
+#pic ul{
+    display: flex;
+    justify-content: center;
+}
+
+#pic ul li{
+    width: 35px;
+    margin: 10px;
+}
+#pic ul li img{
+    width: 100%;
+}
+
+
+#last{
+    background: #333337;
+    color: #bfbfbf;
+   
+   
+}
+#last ul{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+#last ul li{
+    margin-right: 20px;
+}
+
+#last ul li a{
+    color: #bfbfbf;
+}
+
+#last ul li span{
+    color: #fff;
+    font-weight: 500;
+}
+
+.text1 h1 strong{
+    font-weight: normal;
+    
+}
+
+
+
+
+
+/*/////////pc에서 안보여야될것들//////////*/
+
+#menu_icon{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/*/////////<!--media query-->//////////*/
+@media screen and (max-width:768px){
+
+/*
+#pho1 a{
+    background: #4e4e4e;
+    width: 48px;
+    height: 8px;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    line-height: 9px;
+    font-size: 10px;
+    position: absolute;
+    top: 53%;
+    right: 45%
+}
+*/
+   
+    #all {
+    
+    margin-top: none;
+    }
+    header{
+        height: 85px;
+    }
+    
+    #id{
+        display: none;
+    }
+    #logo{
+        position: absolute;
+        top: -10px;
+        left: -10px
+    }
+    #logo img{
+        width: 90%;
+    } 
+    
+    
+    #mb_navi{
+    display: block;
+    }
+    
+  #pho1{
+   background: url(../img/bg.jpg) -550px no-repeat;
+    background-size: cover;
+    }
+    
+    #nav{
+        display: none;
+        
+    }   
+    
+    #menu_icon{
+        display: block;
+        top: 25px;
+    }
+    .text1 h1{
+        font-size: 40px;
+    }
+    
+    .title_02{
+    position: absolute;
+    top: 17%;
+   
+    }
+    
+    .title_02 > h3{
+        font-size: 33px;
+       
+    }
+    .box2{
+    position: absolute;
+    top: -30%; 
+    left: 30%;
+    right: 0;
+       
+    }
+    .box2 img{
+        
+    }
+
+    #pho3_wrap ul li h3{
+    font-size: 23px;
+    }
+    #menu{
+        left: calc(50% - 71px);
+        
+        
+    }
+
+    #scr{
+        position: absolute;
+        top: 180px;
+    }
+
+    #icon ul li img{
+    width: 60%;
+     
+}
+    #icon{
+        height: 170px;
+    }
+    
+    #icon h2{
+       font-size: 15px;
+        font-weight: 400;
+    }
+    
+    #sns ul li{
+        font-size: 65px;
+        position: absolute;
+        top: 90px;
+        left: 200px;
+        
+    }
+    #sns_pho{
+       width: 100%;
+        margin-top: none;
+    }
+    #sns_pho ul{
+        flex-wrap: wrap;
+  
+    }
+ 
+    #sns_pho ul:nth-child(2){
+        display: none;
+    }
+
+    #sns_pho ul li{
+        width: 40%;
+        margin: 5%
+    }
+
+    #last ul li:nth-child(3){
+        display: none;
+    }
+    #last ul li:nth-child(5){
+        display: none;
+    }
+    
+    #wowslider-container1 a.ws_next {
+        right: 0em;
+    }
+     #wowslider-container1 a.ws_prev {
+        left: 0em;
+    }
+    
+    #last ul:nth-child(2){
+        display: none;
+    }
+    
+    
+
+
+}/*media screen*/
+
+
+
+
+
+
+
+@media screen and (max-width: 430px){
+    .text1 h1 strong{
+        display: block;
+    }
+    
+     
+    
+    
+    
+    
+}
+
+
+
+
+
+

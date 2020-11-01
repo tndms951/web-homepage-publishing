@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main_bon</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Made with WOW Slider - Create beautiful, responsive image sliders in a few clicks. Awesome skins and animations. Jquery carousel slider" />
+	
+	<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link rel="stylesheet" href="dist/css/swiper.min.css"> 
+    
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <link rel="stylesheet" href="css/jquery.fullpage.css">
+    <link rel="stylesheet" href="css/main_bon.css">
+    <script src="js/navi_bon.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+      
+      <script src="js/jquery.fullpage.js"></script><!--모바일 메뉴 불러온거-->
+      
+      <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+   
+     
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script&display=swap" rel="stylesheet">         
+     
+    
+    
+<script>
+     $(function(){ //JQuery 준비
+      $('#fullpage').fullpage({
+          /*anchors:['firstPage','secondPage','3rdPage','4thPage','5thPage'],*/
+          menu:'#navi > ul',
+          navigation: true,   /*옆 블릿버튼 flase로 하면 안나옴*/
+          navigationPosition:'right',
+          responsiveWidth:768,
+           scrollingSpeed:700,
+          /*scrollBar:true;*/
+      });
+         
+        
+          
+         /*메뉴 슬라이드*/
+         $('#nav ul li').mouseenter(function(){
+             $(this).find('.sub').stop().slideDown('fast');
+            }).mouseleave(function(){
+              $(this).find('.sub').stop().slideUp('fast');
+         });
+           
+         
+        
+         /*아이콘 오버시*/
+        var i;
+         $('#icon ul li').mouseover(function(){
+             i = $(this).index()+1;
+              $(this).find('img').attr('src','img/ha'+i+'.png');                                        
+            }).mouseout(function(){
+              $(this).find('img').attr('src','img/ca'+i+'.png');                                        
+            });
+          
+        
+         $('#pho1').addClass('info');
+        
+ });//JQuery 종료  
+    
+</script>
+   
+   
+   
+    
+</head>
+<body>
+    <header>
+      <div id="all_wrap" class="center">
+          <div id="id" class="clearfix center">
+                  <ul>
+                      <li><a href="#">로그인</a></li>
+                      <li><a href="#">회원가입</a></li>
+                      <li><a href="#">장바구니</a></li>
+                  </ul>
+              </div>
+           <div id="all" class="center">
+              
+               <div id="logo" >
+                  <a href="#"><img src="img/new.png" alt="로고"></a>
+                </div><!--logo-->
+                <div id="nav">
+                    <ul>
+                       <li data-menuanchor="firstPage" class="active">
+                       <a href="#">본죽</a>
+                           <ul class="sub">
+                               <li><a href="#">브랜드소개</a></li>
+                               <li><a href="#">매장찾기</a></li>
+                               <li><a href="#">이벤트</a></li>
+                           </ul>
+                       </li>
+                       <li data-menuanchor="secondPage">
+                       <a href="#">메뉴</a>
+                        <ul class="sub">
+                               <li><a href="#">시그니처죽</a></li>
+                               <li><a href="#">영양죽</a></li>
+                               <li><a href="#">보양죽</a></li>
+                               <li><a href="#">전통죽</a></li>
+                               <li><a href="#">비빔밥</a></li>
+                               <li><a href="#">뚝배기</a></li>
+                           </ul>
+                       </li>
+                       <li data-menuanchor="3rdPade">
+                       <a href="#">도시락</a>
+                        <ul class="sub">
+                               <li><a href="#">생일도시락</a></li>
+                               <li><a href="#">일반도시락</a></li>
+                               <li><a href="#">다이어트</a></li>
+                           </ul>
+                       </li>
+                       <li data-menuanchor="4thPage">
+                       <a href="#">베이비본죽</a>
+                        <ul class="sub">
+                               <li><a href="#">메뉴소개</a></li>
+                               <li><a href="#">주문하기</a></li>
+                           </ul>
+                       </li>
+                       <li data-menuanchor="5thPage">
+                       <a href="#">창업안내</a>
+                        <ul class="sub">
+                               <li><a href="#">창업안내</a></li>
+                               <li><a href="#">창업상담</a></li>
+                               <li><a href="#">창업설명회</a></li>
+                           </ul>
+                       </li>
+                   </ul>
+                </div><!--nav-->
+                <div id="menu_icon">
+                    <img src="img/baseline_menu_black_18dp.png" alt="메뉴">
+                </div>
+      
+       </div><!--all-->
+      
+
+       
+        </div><!--all_wrap-->
+        
+        
+        
+        <!--모바일 메뉴!-->
+        <div id="mb_navi">
+         <span class="close">
+           <i class="material-icons"> <!--아이콘임-->
+            clear
+            </i> 
+        </span>
+        <div id="sm_menu">
+           <div id="login">
+               <ul>
+                   <li>
+                       <a href="#">
+                         로그인  
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                         회원가입  
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                         장바구니  
+                       </a>
+                   </li>
+               </ul>
+               
+           </div>
+            <ul>
+                <li>
+                    <span><a href="#">본죽</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">브랜드소개</a></li>
+                            <li><a href="#">매장찾기</a></li>
+                            <li><a href="#">이벤트</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <span><a href="#">메뉴</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">시그니처죽</a></li>
+                            <li><a href="#">영양죽</a></li>
+                            <li><a href="#">보양죽</a></li>
+                            <li><a href="#">전통죽</a></li>
+                            <li><a href="#">비빔밥</a></li>
+                            <li><a href="#">뚝배기</a></li>             
+                            
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <span><a href="#">도시락</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">생일도시락</a></li>
+                            <li><a href="#">일반도시락</a></li>
+                            <li><a href="#">다이어트 도시락</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <span><a href="#">베이비본죽</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">메뉴소개</a></li>
+                            <li><a href="#">주문하기</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <span><a href="#">창업안내</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">창업안내</a></li>
+                            <li><a href="#">창업상담</a></li>
+                            <li><a href="#">창업설명회</a></li>
+                        </ul>
+                    </div>
+                </li>
+                
+            </ul>
+
+            </div>
+        
+        </div><!--mb_navi-->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+     </header>
+        <div id="fullpage">
+             
+       <div id="pho1" class="section"><!--section-->
+        
+        
+        <div class="text1">
+           <h1><strong>어서오세요 새로운 맛집</strong><strong> 본죽 입니다.</strong></h1>
+           <span>자연의 신선한 재료에 정성을 담는다는 원칙.<br>
+
+            행복과 건강은 기본에서 시작하기에 ‘본’(本)을 지키고 키워가는 죽을 만듭니다.<br>
+
+            몸을 채우는 건강한 든든함. 마음을 데우는 따뜻한 온기.<br>
+
+            정성을 다하는 삶, 더 나은 하루를 만듭니다.</span>
+        </div>
+        
+               
+            </div><!--pho1-->
+    
+            
+       
+           
+      
+        <div id="pho2" class="section"><!--section-->
+          <div id="pho2_wrap">
+          
+           <div class="title_02">
+                  <h3>한식을 가장 잘하는 기업</h3>
+             </div><!--title_02--> 
+                   
+           <div class="box1">
+               <ul>
+                   <li><span>17th</span>SINCE2002</li>
+                   <li><p><a href="#">매장찾기</a></p></li>
+               </ul>
+       
+           </div>
+           
+           <div class="box2">
+               <img src="img/main_m02.png" alt="죽 이미지">
+           </div>
+           
+           
+       </div><!--pho2_wrap-->
+        <div id="cover">
+              
+          </div>
+           
+           
+       </div><!--pho2-->
+       
+       <div id="pho3" class="section">
+           <div id="pho3_wrap">
+             <div id="menu">
+              <ul>
+                  <li><h3>인기메뉴 TOP6</h3></li>
+                  <li><a href="#"><span>메뉴 전체보기</span></a></li>
+              </ul>
+              </div><!--menu-->
+              
+              
+         
+                   
+        <div id="scr">
+        
+        <div id="wowslider-container1">
+	<div class="ws_images"><ul>
+		<li><a href="#"><img src="data1/images/eat1.jpg" alt="" title="" id="wows1_0"/></a></li>
+		<li><a href="#"><img src="data1/images/eat2.jpg" alt="" title="" id="wows1_1"/></a></li>
+		<li><a href="#"><img src="data1/images/eat3.jpg" alt="" title="" id="wows1_2"/></a></li>
+		<li><a href="#"><img src="data1/images/eat4.jpg" alt="" title="" id="wows1_3"/></a></li>
+		<li><a href="#"><img src="data1/images/eat6.jpg" alt="" title="" id="wows1_4"/></a></li>
+		<li><a href="#"><img src="data1/images/eat7.jpg" alt="" title="" id="wows1_5"/></a></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title=""><span><img src="data1/tooltips/eat1.jpg" alt=""/>1</span></a>
+		<a href="#" title=""><span><img src="data1/tooltips/eat2.jpg" alt=""/>2</span></a>
+		<a href="#" title=""><span><img src="data1/tooltips/eat3.jpg" alt=""/>3</span></a>
+		<a href="#" title=""><span><img src="data1/tooltips/eat4.jpg" alt=""/>4</span></a>
+		<a href="#" title=""><span><img src="data1/tooltips/eat6.jpg" alt=""/>5</span></a>
+		<a href="#" title=""><span><img src="data1/tooltips/eat7.jpg" alt=""/>6</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">jquery carousel slider</a> by WOWSlider.com v8.8</div>
+	<div class="ws_shadow"></div>
+	</div>	
+	<script type="text/javascript" src="engine1/wowslider.js"></script>
+	<script type="text/javascript" src="engine1/script.js"></script>
+
+     
+       </div> <!--scr --> 
+          
+              
+              
+              
+              
+              
+              
+           </div><!--pho3_wrap-->
+           
+          
+           
+           <div id="cover">
+              
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+           
+       </div><!--pho3-->
+       
+      
+      <div id="pho4" class="section"> 
+       <div id="pho4_wrap">
+          <div id="box_wrap">
+           <div id="icon">
+             <div id="wram">
+                  <h2>본으로 전하는 따뜻한 마음</h2>
+             </div>
+                 <ul>
+                  <li><a href="#"><img src="img/ca1.png"><span>주문하기</span></a></li>
+                  <li><a href="#"><img src="img/ca2.png"><span>선물하기</span></a></li>
+                  <li><a href="#"><img src="img/ca3.png"><span>단체주문</span></a></li>
+              </ul>
+               
+           </div><!--icon-->
+           </div><!--box_wrap-->
+           
+       </div><!--pho4_wrap-->
+      
+       
+           
+           
+           <div id="cover">
+              
+          </div>
+           
+           </div><!--pho4--> 
+       
+        
+        
+        
+        
+        <div id="pho5" class="section">
+            <div id="sns">
+                <ul>
+                    <li data-text="bon sns">bon SNS</li>
+                    
+                </ul>
+            </div>
+            
+            <div id="sns_pho" class="center img_box">
+                <ul>
+                    <li><a href="#"><img src="img/bon-05.png" alt="sns사진"></a></li>
+                    <li><a href="#"><img src="img/bon-06.png" alt="sns사진"></a></li>
+                    <li><a href="#"><img src="img/bon-07.png" alt="sns사진"></a></li>
+                    <li><a href="#"><img src="img/bon-08.png" alt="sns사진"></a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><img src="img/bon-09.png" alt="sns사진"></a></li>
+                    <li><a href="#"><img src="img/bon-10.png" alt="sns사진"></a></li>
+                    <li><a href="#"><img src="img/bon-11.png" alt="sns사진"></a></li>
+                    <li><a href="#"><img src="img/bon-12.png" alt="sns사진"></a></li>
+                </ul>
+            </div>
+            
+         <div id="footer">
+           <div id="pic">
+               <ul>
+                  <li>
+                      <a href="#"><img src="img/facebook.png" alt="페이스북"></a>
+                  </li> 
+                  <li>
+                      <a href="#"><img src="img/instagram.png" alt="인스타그램"></a>
+                  </li> 
+                  <li>
+                      <a href="#"><img src="img/youtube.png" alt="유튜브"></a>
+                  </li> 
+                
+               </ul>
+               
+           </div>
+            <div id="last">
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#"><span>개인정보처리방침</span></a></li>
+                    <li><a href="#">이메일 무단수집거부</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">협력업체 모집</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    
+                </ul>
+                <ul>
+                    <li>본아이에프(주)</li>
+                    <li>서울특별시 영등포구 선유로 165 (양평동3가, 와이피센터) 6층</li>
+                    <li>대표자명:이진희 사업자등록번호 101-86-07256</li>
+                    <li>통신판매신고번호:2008-서울종로-0649호</li>
+                </ul>
+                <ul>
+                    <li>
+                    COPYRIGHT 2018 BONIF CO. LTD. ALL RIGHTS RESERVED.</li>
+                </ul>
+               
+            </div>   
+                
+            
+       
+        </div><!--footer-->
+        
+        
+        </div><!--pho5-->
+        
+        
+        
+        
+           
+            
+       
+        
+        
+        
+        
+        
+         
+          
+           
+     </div><!--fullpage-->
+        
+        
+        
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Swiper JS --> <!--스크립트-->
+  <script src="dist/js/swiper.min.js"></script>
+    
+    
+    <script>
+    var swiper1 = new Swiper('.swiper-container', {
+      slidesPerView: 1, //보여지는 슬라이드 개수
+      spaceBetween: 30, //슬라이드 사이 공간 /*0으로하면 여백없음*/
+      loop: true,  // 반복 슬라이드
+      keyboard: {
+        enabled: true,  //키보드 제어 /*슬라이드 키보드로하는거*/
+      },
+      autoplay: {
+        delay: 5000, // 5초마다 슬라이드 /*자동슬라이드임*/
+        disableOnInteraction: true, //버튼 제어시 멈춤 
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true, //블릿버튼 제어
+      }
+    });  
+    
+   </script> 
+    
+    
+</body>
+</html>

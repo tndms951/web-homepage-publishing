@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>          
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main_house</title>
+
+      <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="dist/css/swiper.min.css"> 
+    <link rel="stylesheet" href="css/time_style.css">
+    <link rel="stylesheet" href="css/house_style.css"><!--해더푸터-->
+    <link rel="stylesheet" href="css/sub_shap_house.css"><!--컨텐츠-->
+    
+    <link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/navi.js"></script>
+    <!--favicon 넣기-->
+    <!--아이폰 홈화면 아이콘-->
+    <link rel="apple-touch-icon-precomposed" href="img/Etude.png">
+    <!--pc 아이콘-->
+    <link rel="shortcut icon" href="img/Etude.png">
+   
+   <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+   <!--글꼴-->
+   
+    
+   <script>
+    $(function(){
+       
+        
+       
+         
+        $('.go_top').click(function(){
+            $('html, body').animate({
+                scrollTop : 0
+            },500);
+            return false;
+        });
+        
+        var offset = 200;
+        $(window).scroll(function(){
+            var st = $(this).scrollTop();
+            
+            if(st > offset  && $(this).width()>768){
+                $('.go_top').fadeIn(500);
+            }else{
+                $('.go_top').fadeOut(500);
+            }
+        });
+        $(window).resize(function(){
+             if($(this).width()<=768){
+                 $('.go_top').hide();
+             }
+         })
+        
+        
+        
+        $('#pro ul li').click(function(){
+            $('#pro ul').hide();
+            $('#pro_wrap').text($(this).text());  
+            $('#pro #pro_wrap').removeClass('open');
+        });
+        
+      
+        $('.clearfix2 li').eq(5).addClass('on');/*헤더 활성화 시키는거 홈,신상품,베스트그부분!*/
+        $('#menu li').eq(1).addClass('on');//*서브안에 메뉴 활성화시킨거
+   
+    });/*제이쿼리끝*/
+    
+    
+    </script>
+   
+</head>
+<body>    
+    <? include "header.html" ?>
+   <div id="all">
+    <div id="menu">
+       <ul class="center">
+           <li>
+              <a href="sub05_house.html">브랜드소개</a> 
+           </li>
+           <li>
+              <a href="sub_shap_house.html">매장안내</a> 
+           </li>
+           <li>
+             <a href="http://sjsweb.dothome.co.kr/xe/products_review">이용후기</a>
+           </li>
+       </ul>
+   </div>
+   
+   </div><!--all-->
+   
+   
+   <div id="map_wrap">
+   <div id="map" class="center" style="width:100%;height:350px;"></div>
+    </div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=779f7f1d5d99f09d60bc700adca7b0a8"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng(37.5616985,126.984714), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+    };
+
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+ 
+// 버튼을 클릭하면 아래 배열의 좌표들이 모두 보이게 지도 범위를 재설정합니다 
+var points = [
+    new kakao.maps.LatLng(37.5616985,126.984714),
+    new kakao.maps.LatLng(37.5616985,126.984714),
+    new kakao.maps.LatLng(37.5616985,126.984714)
+];
+
+// 지도를 재설정할 범위정보를 가지고 있을 LatLngBounds 객체를 생성합니다
+var bounds = new kakao.maps.LatLngBounds();    
+
+var i, marker;
+for (i = 0; i < points.length; i++) {
+    // 배열의 좌표들이 잘 보이게 마커를 지도에 추가합니다
+    marker =     new kakao.maps.Marker({ position : points[i] });
+    marker.setMap(map);
+    
+    // LatLngBounds 객체에 좌표를 추가합니다
+    bounds.extend(points[i]);
+}
+
+function setBounds() {
+    // LatLngBounds 객체에 추가된 좌표들을 기준으로 지도의 범위를 재설정합니다
+    // 이때 지도의 중심좌표와 레벨이 변경될 수 있습니다
+    map.setBounds(bounds);
+}
+    
+</script>
+ 
+  <div id="all">
+        <div id="box1" class="center" >
+            <div id="pho">
+             <img src="img/sub5/img_etude_01_s.jpg" alt="명동점사진">
+             </div>
+         <div id="text">
+             <h3>명동1호점</h3>
+             <h4>서울특별시 중구 명동2가31-7</h4>
+             <h4><span>전화: 02-753-3771</span></h4>
+             <p>10:00am - 9:30pm</p>
+
+         </div><!--text-->
+     
+         </div>  <!--box1-->
+   
+        <div id="box2" class="center" >
+            <div id="pho">
+             <img src="img/sub5/img_etude_01_s.jpg" alt="명동점사진">
+             </div>
+         <div id="text">
+             <h3>에뛰드하우스</h3>
+             <h4>서울특별시 중구 명동2가10길20</h4>
+             <h4><span>전화: 02-755-3004</span></h4>
+             <p>10:00am - 9:30pm</p>
+
+         </div><!--text-->
+     
+         </div>  <!--box1-->
+         
+         <div id="box3" class="center" >
+            <div id="pho">
+             <img src="img/sub5/img_etude_01_s.jpg" alt="명동점사진">
+             </div>
+         <div id="text">
+             <h3>안양시동안구점</h3>
+             <h4>경기도 안양시 동안구 호계동 1039-3</h4>
+             <h4><span>전화: 031-380-1340</span></h4>
+             <p>10:00am - 9:30pm</p>
+
+         </div><!--text-->
+     
+         </div>  <!--box1-->
+         
+          <div id="box4" class="center" >
+            <div id="pho">
+             <img src="img/sub5/img_etude_01_s.jpg" alt="명동점사진">
+             </div>
+         <div id="text">
+             <h3>장충동점</h3>
+             <h4>서울특별시 중구 장충동 동호로 249</h4>
+             <h4><span>전화: 02-2230-3859</span></h4>
+             <p>10:00am - 9:30pm</p>
+
+         </div><!--text-->
+     
+         </div>  <!--box1-->
+         
+          <div id="box5" class="center" >
+            <div id="pho">
+             <img src="img/sub5/img_etude_01_s.jpg" alt="명동점사진">
+             </div>
+         <div id="text">
+             <h3>(주)에뛰드</h3>
+             <h4>서울특별시 관악구 신림동 1640-8</h4>
+             <h4><span>전화: 02-873-3434</span></h4>
+             <p>10:00am - 9:30pm</p>
+
+         </div><!--text-->
+     
+         </div>  <!--box1-->
+   
+   
+   
+   
+ </div> <!--all--> 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  <script src="js/time_style.js"></script>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+      
+        <div class="go_top"><a href="#">Go Top</a></div>
+            
+   
+    <? include "footer.html" ?>
+    
+     
+  
+   
+   <!-- Swiper JS -->
+  <script src="dist/js/swiper.min.js"></script>
+     <script>
+    var swiper1 = new Swiper('.swiper-container', {
+      slidesPerView: 3, //보여지는 슬라이드 개수
+      spaceBetween: 60, //슬라이드 사이 공간 /*0으로하면 여백없음*/
+      loop: true,  // 반복 슬라이드
+     
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true, //블릿버튼 제어
+      },
+        navigation: {
+        nextEl: '.swiper-button-next_new',
+        prevEl: '.swiper-button-prev_new',
+      },
+         breakpoints:{
+           
+            768:{
+                slidesPerView: 2,
+                spaceBetween:20
+            }
+        }
+    });
+         
+         
+         
+    </script>
+    
+</body>
+</html>

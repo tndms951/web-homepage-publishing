@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wine_main</title>
+    
+    
+    <!-- Link Swiper's CSS --> <!--스와이퍼-->
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/wine_main.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/wine_navi.js"></script><!--모바일메뉴--> 
+    
+    <script>
+        $(function(){ //JQuery 준비
+      
+    
+        /*메뉴 슬라이드*/
+         $('#nav ul li').mouseenter(function(){
+             $(this).find('.sub').stop().slideDown('fast');
+            }).mouseleave(function(){
+              $(this).find('.sub').stop().slideUp('fast');
+         });
+            
+    });//JQuery 종료  
+    </script>
+    
+    
+</head>
+<body>
+    <header>
+       <div id="wrap">
+        <div id="all_wrap" class="center">
+          <div id="id" class="clearfix center">
+                  <ul>
+                      <li><a href="#">로그인</a></li>
+                      <li><a href="#">회원가입</a></li>
+                      <li><a href="#">장바구니</a></li>
+                  </ul>
+              </div>
+           <div id="all" class="center">
+              
+               <div id="logo" >
+                  <a href="#"><img src="img/logo.png" alt="로고"></a>
+                </div><!--logo-->
+                <div id="nav">
+                    <ul>
+                       <li class="active">
+                       <a href="#">회사소개</a>
+                          <ul class="sub">
+                               <li><a href="#">회사소개</a></li>
+                               <li><a href="#">매장안내</a></li>
+                           </ul>
+                           
+                       </li>
+                       <li>
+                       <a href="#">와인리스트</a>
+                            <ul class="sub">
+                               <li><a href="#">와인리스트</a></li>
+                               <li><a href="#">와인추천</a></li>
+                               <li><a href="#">니혼슈 리스트</a></li>
+                           </ul>
+                           
+                       </li>
+                       <li>
+                       <a href="#">와인에대해</a>
+                            <ul class="sub">
+                               <li><a href="#">모든와인</a></li>
+                               <li><a href="#">와인FAQ</a></li>
+                           </ul>
+                           
+                       </li>
+                       <li>
+                       <a href="#">뉴스&amp;이벤트</a>
+                        <ul class="sub">
+                               <li><a href="#">공지사항</a></li>
+                               <li><a href="#">이벤트</a></li>
+                               <li><a href="#">구매문의</a></li>
+                           </ul>
+                           
+                       </li>
+                   </ul>
+                </div><!--nav-->
+                <div id="menu_icon">
+                    <img src="img/menu.png" alt="메뉴">
+                </div>
+      
+       </div><!--all-->
+ 
+        </div><!--all_wrap-->
+        </div><!--wrap-->
+        
+        
+        <!--모바일 메뉴!-->
+        <div id="mb_navi">
+         <span class="close">
+           <i class="material-icons"> <!--아이콘임-->
+             clear
+            </i> 
+        </span>
+        <div id="sm_menu">
+           <div id="login">
+               <ul>
+                   <li>
+                       <a href="#">
+                         로그인  
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                         회원가입  
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#">
+                         장바구니  
+                       </a>
+                   </li>
+               </ul>
+               
+           </div>
+            <ul>
+                <li>
+                    <span><a href="#">회사소개</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">매장안내</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <span><a href="#">와인리스트</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">와인리스트</a></li>
+                            <li><a href="#">와인추천</a></li>
+                            <li><a href="#">니혼슈 리스트</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <span><a href="#">와인에대해</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">모든와인</a></li>
+                            <li><a href="#">와인FAQ</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <span><a href="#">뉴스&amp;이벤트</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">구매문의</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <span><a href="#">창업안내</a></span>
+                    <div class="menu_sec">
+                        <ul>
+                            <li><a href="#">창업안내</a></li>
+                            <li><a href="#">창업상담</a></li>
+                            <li><a href="#">창업설명회</a></li>
+                        </ul>
+                    </div>
+                </li>
+                
+            </ul>
+
+            </div>
+        
+        </div><!--mb_navi-->
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                <div class="main_box1">
+                    <div class="title_02">
+                        <h3>wine</h3>
+                        <h2>best_wine</h2>
+                    </div>
+                    <!--title_02-->
+                    <a href="#">
+                        <img src="img/main!.jpg" alt="사진1">
+                    </a>
+                </div>
+                
+      
+        
+        <div id="wine_wrap">
+        <div id="wine" class="center">
+           <h3>BEST WINE</h3>
+           <div class="best swiper-container sw_new">
+              <div class="main_box2_wrap swiper-wrapper">
+              
+               <div class="main_box2 swiper-slide">
+                    <a href="#">
+                        <img src="img/wine01.gif" alt="와인사진">
+                    </a>
+                    
+                </div>
+                <div class="silde_1 swiper-slide">
+                    <a href="#">
+                        <img src="img/wine02.gif" alt="와인사진">
+                    </a>
+                </div>
+                  
+                <div class="silde_2 swiper-slide">
+                   <a href="#">
+                       <img src="img/wine03.gif" alt="와인사진">
+                   </a>
+                </div>
+                  
+                   <!--<div class="silde_3 swiper-slide">
+                    <a href="#"><img src="img/wine04.gif" alt="와인사진"></a>
+                  </div>-->
+        </div>
+        </div>
+        
+        </div>
+        <div class="swiper-pagination swiper-pagination_sw1_pc"></div> <!--블릿버튼-->
+        </div>
+    
+        <div id="wine02_wrap" class="center">
+            
+            <div id="wine02">
+                <h3>Top Products</h3>
+                <ul>
+                    <li>
+                        <img src="../wine/img/wine.png">
+                    </li>
+                </ul>
+                
+            </div>
+            
+            <div id="text">
+                <ul>
+                    <li>Red Wine</li>
+                    <li>sparkling Wine</li>
+                    <li>White Wine</li>
+                    <li>Champagne</li>
+                    <li>white Wine</li>
+                </ul>
+            </div>
+            
+            <div id="pho01" class="center">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="../wine/img/wine05.gif">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../wine/img/wine06.gif">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../wine/img/wine07.gif">
+                        </a>
+                    </li>
+                </ul>
+                
+            </div><!--pho01-->
+            
+            
+        </div><!--wine02_wrap-->
+        
+        
+        <div id="pho02">
+           <div id="pho02_01" class="center">
+            <div id="pho02_wrap">
+            <ul>
+                <li>
+                    <img src="../wine/img/pho!.jpg">
+                </li>
+                <li>
+                    <img src="../wine/img/pho@.jpg">
+                </li>
+                <li>
+                    <img src="../wine/img/pho!@!.jpg">
+                </li>
+                
+            </ul>
+           </div>
+            </div>
+            
+        </div>
+        
+        
+         <div id="pho03">
+            <div id="pho03_01" class="center">
+             <div id="pho03_wrap">
+                 <h3><span>STORY</span> IN WINE</h3>
+                 <h2>더보기</h2>
+                 <ul>
+                     <li>[WIME OF THE MONTH] 가을엔? 피노누아!</li>
+                 </ul>
+                 <ul>
+                     <li><span>2019-11-10</span></li>
+                 </ul>
+                 <ul>
+                     <li><h4>청명한 하늘과 상쾌하게 불어오는 바람이 한껏낭만적인 가을. 한없이 푸르고 맑고 높은 하늘과 어떤 계절보다 노을이 아름다운 오늘. 가장 생각나는 와인은 부담스럽지 않은 피노누아 한잔입니다.</h4></li>
+                 </ul>
+                 
+             </div>
+             </div>
+        
+         </div>
+        
+        
+        <div id="footer">
+           <div id="pic">
+               <ul>
+                  <li>
+                      <a href="#"><img src="img/facebook.png" alt="페이스북"></a>
+                  </li> 
+                  <li>
+                      <a href="#"><img src="img/instagram.png" alt="인스타그램"></a>
+                  </li> 
+                  <li>
+                      <a href="#"><img src="img/youtube.png" alt="유튜브"></a>
+                  </li> 
+                
+               </ul>
+               
+           </div>
+            <div id="last">
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#"><span>개인정보처리방침</span></a></li>
+                    <li><a href="#">이메일 무단수집거부</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">협력업체 모집</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    
+                </ul>
+                <ul>
+                    <li>
+                    COPYRIGHT 2018 WINETIME CO. LTD. ALL RIGHTS RESERVED.</li>
+                </ul>
+               
+            </div>   
+                
+            
+       
+        </div><!--footer-->
+        
+        
+        
+        
+        
+        
+        
+        <!-- Swiper JS --> <!--스크립트-->
+  <script src="dist/js/swiper.min.js"></script>
+        
+    <script>
+    var swiper1 = new Swiper('.sw_new', {
+      slidesPerView: 3, //보여지는 슬라이드 개수
+      spaceBetween: 30, //슬라이드 사이 공간 /*0으로하면 여백없음*/
+      loop: true,  // 반복 슬라이드
+      keyboard: {
+        enabled: true,  //키보드 제어 /*슬라이드 키보드로하는거*/
+      },
+      autoplay: {
+        delay: 5000, // 5초마다 슬라이드 /*자동슬라이드임*/
+        disableOnInteraction: true, //버튼 제어시 멈춤 
+      },
+      pagination: {
+        el: '.swiper-pagination_sw1_pc',
+        clickable: true, //블릿버튼 제어
+      }
+    });
+       
+    </script>        
+        
+    </header>
+</body>
+</html>

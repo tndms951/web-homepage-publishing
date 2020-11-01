@@ -1,0 +1,370 @@
+@charset "utf-8";
+
+
+#pho{
+   
+    margin-top: 30px;
+    width: 40%;
+    margin-left: 10%;
+}
+#pho img{
+    width: 100%;
+}
+
+
+#box1{
+    display: flex;
+    justify-content: space-around;
+}
+#text{
+    margin-top: 50px;
+    margin-bottom: 50px;
+     width: 35%;
+    margin-right: 10%;
+    margin-left: 15%;
+}
+#title{
+    border-bottom: 1px solid #000;
+}
+
+#title span{
+    border: 1px solid #969696;
+    border-radius: 10px;
+    padding: 3px 15px;
+}
+#title h2{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    
+}
+
+.price{
+    margin-top: 20px;
+    border-bottom: 1px solid #969696;
+    margin-right: 10px;
+}
+
+.price li{
+    margin: 15px 0;
+    
+}
+.price li span{
+    font-size: 15px;
+}
+
+.price li strong{
+    float: right;
+    font-size: 13px;
+}
+.price li strong p{
+    text-decoration: line-through;
+}
+
+.price h3{
+    display: inline-block;
+    color: #ee67a3;
+    margin-right: 8px;
+    font-size: 16px
+}
+.option{
+    position: relative;
+}
+.option .sel{
+    margin-top: 15px;
+    border: 1px solid #969696;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.option .sel span{
+    margin-left: 5px;
+}
+
+.option .sel img{
+    width: 20px;
+    float: right;
+    margin-right: 5px;
+    margin-top: 8px;
+}
+.option ul{
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    left: 0;
+    top: 39px;
+    border: 1px solid #969696;
+    box-sizing: border-box;
+    display: none;
+    cursor: pointer;
+}
+.option ul li{
+    line-height: 30px;
+   
+}
+.option ul li span{
+    margin-left: 5px;
+    font-size: 13px;
+}
+.option ul li strong{
+    float: right;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+#text dl{
+    margin-top: 20px; 
+   
+}
+
+#text dl dt{
+   display: inline-block;
+    font-size: 15px;
+}
+#text dl dd{
+    display: inline-block;
+    float: right;
+    font-size: 23px;
+    color: #ee67a3;
+    font-weight: bold;
+    margin-right: 6px;
+}
+.button{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button a:first-child{
+    border: 1px solid #ee67a3;
+    color: #ee67a3;
+    margin-right: 10px;
+    font-weight: bold;
+    width: 45%;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+}
+.button a:last-child{
+    font-weight: normal;
+    background: #ee67a3;
+    color: #fff;
+    width: 45%;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+
+/*////////box2/////////*/
+#box2 img{
+    vertical-align: top;
+}
+.tap_title{
+    display: flex;
+    border-top: 1px solid #696969;
+    border-bottom: 1px solid #696969;
+    margin-bottom: 30px;
+}
+
+.tap_title li{
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 5px;
+    width: 30%;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+}
+
+.pro_list{
+    text-align: center;
+}
+
+
+
+
+.tap_title li a:hover, .tap_title li a.on{
+    display: block;
+    color: #ee67a3;
+}
+
+
+
+
+
+
+
+
+
+/*/////////////box3///////*/
+
+#box3 #other{
+    border-bottom: 1.3px solid #000;
+        line-height: 30px;
+    
+}
+#box3 #other strong{
+    margin-bottom: 10px;
+}
+
+#box3 #other .other_text{
+   
+}  
+
+#box3{
+   position: relative;
+}
+#box3 #other strong{
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    
+}
+#box3 #other span{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#box3 #other span img{
+    width: 15px;
+    
+}
+
+#box3 #other p{
+    display: inline-block;
+     cursor: pointer;
+
+}
+#box3 #other p img{
+     width: 15px;
+   
+    
+}
+.swiper-button-prev_new{
+    background-size: 13px;
+    left: auto;
+    right: 30px;
+    top: 0px;
+    margin-top: -8px;
+}
+.swiper-button-next_new{
+    background-size: 13px;
+    top: 0px;
+    margin-top: -8px;
+}
+#pho_1{
+  
+}
+
+
+#pho_1 img{
+    width: 200px;
+}
+
+#pho_1 span{
+    
+    margin-bottom: 10px;
+    display: block;
+}
+#pho_1 strong{
+    display: block;
+}
+
+
+#pho_1 ul li{
+    display: inline-block;
+   text-align: center;
+}
+
+.swiper-container{
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+/*이전다음 모양 이미지바꾸기*/
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    background-image: url(../img/sub1/main_35.png);
+    
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+    background-image: url(../img/sub1/main_36.png);
+   
+}
+
+
+
+
+
+
+
+
+/*모바일*/
+@media screen and (max-width:768px){
+    .go_top a{
+        display: none;
+    }
+    
+    #pho{
+        text-align: center;
+    }
+    #pho img{
+        width: 300px;
+        text-align: center;
+    }
+    
+    #box1{
+        display: block;
+        margin-bottom: 100px;
+        
+    }
+    .button{
+       text-align: center;
+    }
+    .price{
+        margin: none;
+    }
+    #text{
+        margin: 0 2%;
+        width: 98%;
+    }
+    
+    .pro_list img{
+        width: 100%;
+    }
+    
+}
+  
+
+
+
+
+
+   /*pc*/ 
+@media screen and (min-width:769px){
+    /*go top*/
+        .go_top{
+            position: fixed;
+            bottom: 60px;
+            right: 100px;
+            color: #000;
+            background:  #969594;
+            padding: 10px;
+        }
+        .go_top:hover{
+            color: #fff;
+            background: #ee67a3;
+        }
+        .go_top a{
+        color: #fff;
+        }
+    
+        .photo ul li:hover .over_box{
+            opacity: 1;    
+            visibility: visible;
+
+        }
+}

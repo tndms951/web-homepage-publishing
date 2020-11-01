@@ -1,0 +1,715 @@
+@charset "utf-8";
+
+/*스타일 초기화*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: #333;
+    font: 12px '나눔고딕', sans-serif;
+    overflow: scroll;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+
+div{
+    box-sizing: border-box;/*정해진 사이즈 안에서 밖으로 나가지 않는다는것*/
+}
+.clearfix::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+.center{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+/*////////////////////////////*/
+header{
+    left: 0;
+    right: 0;
+    z-index: 100;
+   
+    
+}
+#wrap{
+     background: #c6a05a;
+}
+
+#all_wrap{
+   
+}
+#all{
+    padding: 15px;
+   
+    
+}
+#icon{
+   
+}
+#icon  ul{
+    display: flex;
+    flex-wrap: wrap;
+    float: right;
+}
+
+#icon ul li{
+    width: 50px;
+   
+}
+
+#icon ul li img{
+    width: 40px;
+}
+
+#logo{
+   width: 25%;
+    float: left;
+   
+}
+
+#logo img{
+    width: 150px;
+}
+
+#logo_wrap{
+    display: flex;
+    
+}
+
+#all{
+    display: flex;
+    color: #000;
+    height: 85px;
+}
+#id{
+    
+}
+#id ul{
+    display: flex;
+    float: right;
+    margin-top: 10px;
+    
+    
+}
+#id ul li{
+    margin-left: 20px;
+}
+#id ul li a:hover{
+    text-decoration: underline;
+}
+#nav{
+    text-align: center;
+    width: 70%;
+    position: relative;
+}
+#nav> ul{
+    display: flex;
+    width: 93%;
+    height: 45px;
+    justify-content: space-between;
+    margin-left: -94px;
+    margin-top: 18px;
+}
+#nav> ul >li{
+   width: 20%;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+}
+#nav> ul >li> a{
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+    line-height: 25px;
+    
+}
+#nav> ul >li> a:hover{
+    color: #ffffff;    
+}
+
+#nav ul li .sub{
+    background:  #c6a05a;
+   width: 100%;
+    z-index: 100;
+    padding-bottom: 15px;
+    display: none;
+    position: absolute;
+}
+
+#nav ul li ul{
+    display: block;
+}
+#nav ul li ul li{
+    font-size: 14px;
+    margin-top: 13px;
+    line-height: 18px;
+}
+#nav ul li ul li a{
+    display: block;
+}
+#nav ul li ul li a:hover{
+    color: #fff; 
+}
+
+
+
+/*모바일 메뉴*/
+#mb_navi{
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    right: -100%;
+    height: 100%;
+    z-index: 300;
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.8);
+}
+.main_box1 a img{
+    width: 100%;
+}
+
+
+#wine_wrap{
+    background: #f7f7f7;
+}
+#wine ul{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#wine ul li{
+    width: 10%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+#wine ul li img{
+    width: 100%;
+}
+
+.main_box2{
+    position: relative;
+
+}
+.main_box2 a img{
+    width: 40%;
+}
+
+.silde_1 a img{
+    width: 40%;
+}
+
+.silde_2 a img{
+    width: 40%;
+}
+
+
+.title_02 {
+    animation: slideIn 1.5s forwards;
+    transform: translateY(20%);
+    opacity: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+}
+
+.title_02 h3{
+    animation-delay: 0.2s;
+    font-size: 150px;
+    
+}
+.title_02 h2{
+      animation-delay: 0.4s;
+    font-size: 20px;
+    color: #b20a2f;
+}
+
+@keyframes slideIn{
+    0%{
+        transform: translateY(40%); opacity:0;
+    }
+    100%{
+        transform: translateY(0); opacity:1;
+    }
+
+
+}
+
+#wine_wrap{
+    margin-top: 40px;
+}
+#wine h3{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.title_02 {
+    animation: slideIn 1.5s forwards;
+    transform: translateY(20%);
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #c6a05a;
+}
+
+.best{
+    text-align: center;
+}
+
+.swiper-pagination {
+    left: 50%;
+}
+
+#wine02 h3{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+#wine02 ul{
+    width: 4%;
+    margin: 0 auto;
+}
+#wine02 ul li img{
+    width: 100%;
+}
+#text{
+    margin-top: 30px;
+    
+}
+#text ul{
+   
+}
+#text ul li{
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+#text ul li:hover{
+    color: #c4221f;
+    font-weight: 500;
+}
+
+
+#pho01 ul{
+    display: flex;
+    justify-content: center;
+    top: 35%;
+    left: 30%;
+    
+}
+#pho01 ul li{
+    margin-right: 15%;
+    width: 20%;
+}
+
+#pho01 ul li img{
+    width: 100%;
+}
+
+
+#wine02_wrap{
+    position: relative;
+}
+#pho01 ul{
+    position: absolute;
+    top: 35%
+}
+#pho02{
+    margin-top: 140px;
+    height: 330px;
+}
+
+#pho02 ul{
+    display: flex;
+    position: absolute;
+    top: 60px;
+    left: 10%;
+    width: 80%;
+}
+
+#pho02 ul li{
+    margin-right: 30px;
+}
+
+#pho02 ul li img{
+    width: 100%;
+}
+
+#pho02{
+    background: #000;
+    height: 380px;
+    position: relative;
+}
+
+#pho03_01{
+    border: 1px solid #666;
+    height: 200px;
+    margin-top: 50px;
+}
+#pho03_wrap{
+   text-indent: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#pho03_wrap h3 span{
+    color: #c69f5a;
+}
+#pho03_wrap h2{
+ float: right;
+    font-size: 13px;
+    color: #000;
+    font-weight: normal;
+    cursor: pointer;
+    
+}
+#pho03_wrap ul li{
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+#pho03_wrap ul li span{
+    color: #c69f5a;
+    font-size: 10px;
+}
+
+#pho03_wrap ul li h4{
+    color: #a7a7a7;
+    font-weight: normal;
+    text-indent: 10px;
+}
+
+
+
+
+
+#footer{
+    position: absolute;
+    bottom: -1900px;
+    width: 100%;
+}
+#pic{
+    background: #afa697;
+    width: 100%;
+
+    
+}
+
+#pic ul{
+    display: flex;
+    justify-content: center;
+}
+
+#pic ul li{
+    width: 35px;
+    margin: 10px;
+}
+#pic ul li img{
+    width: 100%;
+}
+
+
+#last{
+    background: #333337;
+    color: #bfbfbf;
+   
+   
+}
+#last ul{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+#last ul li{
+    margin-right: 20px;
+}
+
+#last ul li a{
+    color: #bfbfbf;
+}
+
+#last ul li span{
+    color: #fff;
+    font-weight: 500;
+}
+
+.text1 h1 strong{
+    font-weight: normal;
+    
+}
+
+  #pic {
+    background: #b1996f;
+    }
+
+
+
+
+
+
+
+
+
+
+
+/*/////////pc에서 안보여야될것들//////////*/
+
+#menu_icon{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+    mb_navi{
+        display: none;
+    }
+
+
+@media screen and (max-width:1244px){ 
+
+ .title_02 h3 {
+        font-size: 100px;
+    }
+    
+    .title_02 {
+        top: 215px;
+    }
+
+#pho02{
+    margin-top: 100px;
+    height: 280px; 
+       
+    } 
+    
+#footer {
+    bottom: -1050px;    
+
+}  
+    
+    
+    
+    
+    
+    
+    
+/*/////////<!--media query-->//////////*/
+@media screen and (max-width:768px){
+      
+     #menu_icon{
+        display: block;
+        top: 25px;
+    }
+    
+    #nav{
+        display: none;
+    }
+    
+    #id{
+        display: none;
+    }
+    
+    /*모바일메뉴 아이콘*/
+    #menu_icon{
+    display: block;
+    position: absolute;
+    top: 24px;
+    right: 11px;
+    cursor: pointer;
+    }
+
+    
+     /*모바일 메뉴 스타일*/
+    
+    #sm_menu{
+        font: 1em /18px '돋움',sans-serif;
+        color: #000;
+        width: 70%;
+        float: right;
+        height: 100%;
+        background: #f0f0f0;
+    }
+    #sm_menu > ul >li > a{
+        
+        
+    }
+    
+    #sm_menu > ul > li > span > a{
+       
+        color: #000;
+        display: block;
+        text-indent: 1em;
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid #333;
+        font-size: 1.2em
+    } 
+   span.close{
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                cursor: pointer;
+                
+            }
+    #sm_menu li .menu_sec{
+                display: none;
+            }
+    
+    
+    
+    
+    /* 모바일 서브메뉴 스타일*/
+    #sm_menu > ul > li > .menu_sec ul li{
+        border-bottom: 1px solid #666;
+    }
+    #sm_menu > ul > li > .menu_sec ul li:last-child{
+        border-bottom:none;
+    }
+    #sm_menu > ul > li > .menu_sec ul li a{
+                background: #fff;
+                display: block;
+                text-indent: 1em;
+                color: #333;
+                font-size: 1.1em;
+                line-height: 40px;
+                height: 40px;
+            }
+    #sm_menu > ul > li > .menu_sec ul li a:hover{
+                background: #c6a05a;
+                color: #fff;
+            }
+    span.close{
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                cursor: pointer;
+                
+            }
+            span.close .material-icons{
+                color: #fff;
+                font-size: 30px;
+            }
+            
+            #sm_menu li .menu_sec{
+                display: none;
+            }
+        
+    #login{
+        padding: 10px 0;
+    }
+    #login ul{
+       text-align: center;
+    }
+    #login ul li{
+        display: inline-block;
+        margin: 8px;
+        border: 1px solid #666;
+        
+       
+    }
+    #login ul li a{
+        display: block;
+        padding: 10px 15px;
+        color: #fff;
+        background: #404040;
+        display: block;
+        
+    }
+    #login ul li a:hover{
+        text-decoration: underline;
+    }
+    .title_02 h3 {
+        font-size: 60px;
+    }
+    .title_02 h2 {
+        font-size: 20px; 
+    }
+    .title_02 {
+    position: absolute;
+    top: 14%;
+    left: 48%;
+    }
+
+    #wine02 ul {
+        width: 7%;
+    }
+    #wine02 h3 {
+        font-size: 25px;
+        margin-top: 50px;
+    }
+    
+    #text ul li {
+        text-indent: 10px;
+    }
+    
+    #pho01 ul {
+        top: 35%;
+    }
+    
+    #pho01 ul li{
+        margin-right: 5%;
+        width: 20%;
+    }
+    
+   #pho02{
+    margin-top: 40px;
+    height: 200px; 
+       
+    } 
+    
+    #pho02 ul{
+        width: 90%;
+        left: 5%;
+    } 
+   
+    #footer{
+    position: absolute;
+    bottom: -615px;
+    width: 100%;
+    }
+    
+  
+    #last ul li a{
+        font-size: 10px;
+    }
+   
+    
+    
+    
+}/*mobile*/
+    
+    
+    
+    
+    
+    
+}/*mobile*/
+
+
+
+
+

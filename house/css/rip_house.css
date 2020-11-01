@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+#new_wrap{
+    
+    text-align: center;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-top: 60px;
+}
+#new_pho{ /*new 사진들 묶은거*/
+   
+    margin-top: 20px;
+}
+#text h2{ /*new 새로나온 글씨*/
+   font-size: 25px;
+    padding: 10px;
+    color: #000;
+}
+
+
+#box2 ul li:hover a .bot_line{
+    display: block;
+}
+.swiper-wrapper{
+    padding-bottom: 30px;
+}
+.cos img{
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+.cos ul li{
+    
+    text-align: center;
+    padding-bottom: 10px;
+}
+.cos ul li a .bot_line{
+    border-bottom: 2px solid #fff;
+    position: absolute;
+    width: 100%;
+    bottom: -10px;
+}
+.cos ul li:hover a .bot_line{
+    border-bottom: 3px solid #ee67a3;
+}
+.cos ul li span{
+    font-size: 14px;
+    display: block;
+    font-weight: bold;
+    height: 10px;
+    line-height:10px; 
+}
+.cos ul li h4{
+    font-weight: normal;
+    font-size: 12px;
+    margin-top: 13px;
+    height: 20px;
+    line-height: 20px;
+}
+.bot_line{
+    border-bottom: 1px solid #666;
+}
+
+#text{
+    font-size: 12px;
+}
+
+.img{
+    width: 30px;
+    height: 40px;
+}
+
+/*////////////new_box2/////*/
+#new_box2 ul{
+    
+}
+.photo >ul{
+    display: flex;
+    margin: 30px;
+    justify-content: space-between;
+}
+.photo> ul> li{
+    background: #f7f5f5;
+    width: 300px;
+    margin: 0 30px;
+    display: block;
+    position: relative;
+}
+.photo> ul> li a{
+    display: block;
+}
+
+.over_box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #343434;
+    opacity: 0; /*수정할때는 1로해서 수정! 0으로 다시 하면 오버됨!*/
+    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+.over_box ul li a.heart{
+    width: 30px;
+    height: 30px;
+    display: block;
+   position: absolute;
+    top: 15px;
+   right: 17px; background:url(../img/sub1/heart.png) 0 -30px no-repeat;
+    text-indent: -9999px;
+}
+.over_box ul li a.heart.on{
+    background-position: 0 0;
+}
+.over_box ul{
+    
+}
+
+.over_box ul li a{
+     color: #fff;
+    display: block;
+    line-height: 30px;
+    font-size: 15px;
+    
+}
+.over_box ul li span{
+    
+        
+}
+
+.over_box ul li:hover{
+    text-decoration: underline;
+}
+.photo >ul >li h3{
+    font-weight: normal;
+    padding-top: 20px;
+    font-size: 13px;
+    text-align: center;
+    height: 40px;
+}
+.pho{
+    text-align: center;
+}
+.pho>img{
+    width: 100%;    
+    
+}
+.photo >ul >li section{
+    display: flex;
+    justify-content: center;/*flex를넣으면 text-aline:center가 안먹힘! 그래서 justify-content: center로 해야됨; */
+    border: 1px solid #555;
+    padding: 5px;
+    line-height: 20px;
+    
+}
+
+
+.photo ul li section h4{
+    color: #ee67a3;
+    font-size: 14px;
+    margin-right: 5px;
+   
+}
+.photo ul li section span{
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 5px;
+   
+}
+.photo ul li section p{
+    text-decoration: line-through;
+    
+    }
+
+.center img{
+    max-width: 250px;
+}
+
+
+/*이전다음 모양 이미지바꾸기*/
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    background-image: url(../img/main_img/main_37.png)
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+    background-image: url(../img/main_img/main_40.png)
+}
+
+
+
+
+
+
+
+
+
+/*모바일*/
+@media screen and (max-width:768px){
+   
+    .cos ul li img{
+        width: 75%;
+        height: auto;
+        margin: 10px;
+    }
+    #new_wrap{
+        
+    }
+   #new_box2 > ul > li:last-child{
+        display: none;
+    }
+    
+    .photo ul li section{
+        flex-wrap: wrap;
+    }
+    
+   .photo ul li section h4{
+        width: 100%;
+       text-align: center;
+    }
+    .photo > ul> li {
+    background: #ebebeb;
+    width: 45%;
+    margin: 0;
+    }
+    .go_top a{
+        display: none;
+    }
+    
+    
+}
+  
+
+
+
+
+
+   /*pc*/ 
+@media screen and (min-width:769px){
+    /*go top*/
+        .go_top{
+            position: fixed;
+            bottom: 60px;
+            right: 100px;
+            color: #000;
+            background:  #969594;
+            padding: 10px;
+        }
+        .go_top:hover{
+            color: #fff;
+            background: #ee67a3;
+        }
+        .go_top a{
+        color: #fff;
+        }
+    
+        .photo ul li:hover .over_box{
+            opacity: 1;    
+            visibility: visible;
+
+        }
+}
